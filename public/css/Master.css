@@ -1,0 +1,112 @@
+.master{
+border:none;
+border-radius:0px;
+color:white;
+}
+
+
+::-webkit-scrollbar {
+	width: 5px;
+	height: 5px;
+}
+
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 2px rgba(0,0,0,0.3); 
+    -webkit-border-radius: 0px;
+    border-radius: 0px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 0px;
+    border-radius: 0px;
+    background: rgba(51,122,183,0.8); 
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+}
+::-webkit-scrollbar-thumb:window-inactive {
+	background: rgba(51,122,183,0.8); 
+}
+
+input, select, textarea{
+    color: black;
+}
+
+textarea:focus, input:focus {
+    color: black;
+}
+
+.btn-morado {
+    color: white;
+	background-color:purple;
+}
+
+.btn-morado:hover {
+    color: white;
+}
+
+
+.btn-amarillo {
+    color: white;
+	background-color:yellow;
+}
+
+.btn-amarillo:hover {
+    color: white;
+}
+
+.btn-rosa {
+    color: white;
+	background-color:pink;
+}
+
+.btn-rosa:hover {
+    color: white;
+}
+
+
+.btn-cafe {
+    color: white;
+	background-color:brown;
+}
+
+.btn-cafe:hover {
+    color: white;
+}
+
+
+.btn-dorado {
+    color: white;
+	background-color:golden;
+}
+
+.btn-dorado:hover {
+    color: white;
+}
+
+.btn-naranja {
+    color: white;
+	background-color:orange;
+}
+
+.btn-naranja:hover {
+    color: white;
+}
+
+.btn-verde {
+    color: white;
+	background-color:green;
+}
+
+.btn-verde:hover {
+    color: white;
+}
+
+.btn-rojo {
+    color: white;
+	background-color:red;
+}
+
+.btn-rojo:hover {
+    color: white;
+}
+
