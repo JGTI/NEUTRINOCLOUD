@@ -1,32 +1,10 @@
 <!DOCTYPE html>
-<!--
-   This is a starter template page. Use this page to start your new project from
-   scratch. This page gets rid of all links and provides the needed markup only.
-   -->
+
 <html lang="en">
    @section('htmlheader')
    @include('adminlte::layouts.partials.htmlheader')
    @show
-   <!--
-      BODY TAG OPTIONS:
-      =================
-      Apply one or more of the following classes to get the
-      desired effect
-      |---------------------------------------------------------|
-      | SKINS         | skin-blue                               |
-      |               | skin-black                              |
-      |               | skin-purple                             |
-      |               | skin-yellow                             |
-      |               | skin-red                                |
-      |               | skin-green                              |
-      |---------------------------------------------------------|
-      |LAYOUT OPTIONS | fixed                                   |
-      |               | layout-boxed                            |
-      |               | layout-top-nav                          |
-      |               | sidebar-collapse                        |
-      |               | sidebar-mini                            |
-      |---------------------------------------------------------|
-      -->
+
    <link rel="stylesheet" href="plugins/datatables/dataTables.bootstrap.css">
    <link href="css/fileinput.css" media="all" rel="stylesheet" type="text/css"/>
    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
@@ -62,7 +40,7 @@
                         <div class="row">
                            <div class="col-md-12">
 						    <div class="text-right">
-						      <a href="Agregar_Usuario" title="Agregar un Uuevo Usuario al Sistema" class="btn btn-morado"><i class="fa fa-plus-square" aria-hidden="true"></i> Agregar Usuario </a> 
+						      <a href="{{url('Agregar_Usuario')}}" class="btn btn-morado" data-toggle="tooltip" data-placement="top" title="Formulario Para Agregar Un Nuevo Usuario A Neutrino"><i class="fa fa-plus-square" aria-hidden="true"></i> Agregar Usuario </a> 
                              </div>
                               <div style ="overflow-x:scroll">
 							  <br>

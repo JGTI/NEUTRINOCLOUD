@@ -22,6 +22,7 @@ Route::get('/Actualizar_Recibo/{type}', 'ImportControllerCSVRecibo@Recibo');
 Route::post('/importCSVRecibo', 'ImportControllerCSVRecibo@importExcel');
 Route::get('/UsuariosNeutrino', 'UsuarioNeutrino@UsuarioNeutrinoVista');
 Route::get('/Agregar_Usuario', 'UsuarioNeutrino@NuevoUsuarioNeutrinoVista');
+Route::post('/Nuevo_Usuario_Neutrino', 'UsuarioNeutrino@NuevoUsuarioNeutrino');
 Route::get('/Ver_layOut', 'LayOut@VistaLayOut');
 Route::get('/api/UsuariosNeutrino', function () {
 	    $Users = App\User::all()->where("status","=", 1);

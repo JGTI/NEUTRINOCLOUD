@@ -1,32 +1,10 @@
 <!DOCTYPE html>
-<!--
-   This is a starter template page. Use this page to start your new project from
-   scratch. This page gets rid of all links and provides the needed markup only.
-   -->
+
 <html lang="en">
    @section('htmlheader')
    @include('adminlte::layouts.partials.htmlheader')
    @show
-   <!--
-      BODY TAG OPTIONS:
-      =================
-      Apply one or more of the following classes to get the
-      desired effect
-      |---------------------------------------------------------|
-      | SKINS         | skin-blue                               |
-      |               | skin-black                              |
-      |               | skin-purple                             |
-      |               | skin-yellow                             |
-      |               | skin-red                                |
-      |               | skin-green                              |
-      |---------------------------------------------------------|
-      |LAYOUT OPTIONS | fixed                                   |
-      |               | layout-boxed                            |
-      |               | layout-top-nav                          |
-      |               | sidebar-collapse                        |
-      |               | sidebar-mini                            |
-      |---------------------------------------------------------|
-      -->
+  
    <link rel="stylesheet" href="../plugins/datatables/dataTables.bootstrap.css">
    
    <link href="../css/fileinput.css" media="all" rel="stylesheet" type="text/css"/>
@@ -67,7 +45,7 @@
                               <h5><i class="fa fa-file-excel-o" aria-hidden="true"></i> Importar Archivo:</h5>
                               <form action="{{url('importCSVProductosAlmacen')}}" class="form-horizontal" method="post" enctype="multipart/form-data">
                                  {{ csrf_field() }}
-                                 <input  id="file-0d" type="file" class="file" name="import_file" />
+                                 <input  id="file-0d" type="file" class="file" name="import_file" data-toggle="tooltip" data-placement="top" title="Gestionar Usuarios Actuales De Neutrino"/>
                               </form>
                               <br/>
                               <div style ="overflow-x:scroll">

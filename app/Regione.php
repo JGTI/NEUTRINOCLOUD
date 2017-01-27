@@ -4,11 +4,12 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Rol extends Model
+class Regione extends Model
 {
      protected $fillable = [
 	   'id', 
 	   'nombre',
+	   'status',
 	   'created_at',
 	   'updated_at',
 	   ];
