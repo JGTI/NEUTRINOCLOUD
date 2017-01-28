@@ -4,15 +4,15 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Cliente extends Model
+class Almacene extends Model
 {
-     protected $fillable = [
+    protected $fillable = [
 	   'id', 
 	   'nombre',
-	   'rgb',
+	   'status',
+	   'empresa',
 	   'created_at',
 	   'updated_at',
 	   ];
+	   
 }
-
-
