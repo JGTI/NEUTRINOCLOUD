@@ -86,8 +86,9 @@ $(function () {
 </script>
 
 
- <div class="col-md-6">
+ <div class="col-md-3">
 <div id="{{$AlmacenT->id}}" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+<br>
 </div>
 
 @endforeach

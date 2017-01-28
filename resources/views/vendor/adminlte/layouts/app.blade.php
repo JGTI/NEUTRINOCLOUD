@@ -19,7 +19,7 @@
                      <div class="col-md-12">
                         <div class="box">
                            <div class="box-header with-border">
-                              <h3 class="box-title"><i class="fa fa-sign-out" aria-hidden="true"></i> Panel de Control de Temperaturas </h3>
+                              <h3 class="box-title"><i class="fa fa-check-square-o" aria-hidden="true"></i> Panel de Control de Temperaturas </h3>
                               <div class="box-tools pull-right">
                                  <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
                                  </button>
@@ -28,10 +28,11 @@
                            </div>
                            <!-- /.box-header -->
                            <div class="box-body">
+				 <div style ="overflow-x:scroll">
                         <div class="row">
                           
                             @include('adminlte::layouts.Temperaturas.Temperaturas') 
-                         
+                           </div>
                         </div>
                      </div>
                         </div>
