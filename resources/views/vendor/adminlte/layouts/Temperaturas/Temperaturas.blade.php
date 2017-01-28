@@ -2,7 +2,9 @@
 <script src="https://code.highcharts.com/modules/exporting.js"></script>
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>		
 
-@for ($i = 0; $i < 10; $i++)	
+ 
+ @foreach($Almacen as $AlmacenT)
+ 
 <script type="text/javascript">
 $(function () {
     $(document).ready(function () {
@@ -12,7 +14,8 @@ $(function () {
             }
         });
 
-        Highcharts.chart('{{$i}}', {
+		
+        Highcharts.chart('{{$AlmacenT->id}}', {
             chart: {
                 type: 'spline',
                 animation: Highcharts.svg, // don't animate in old IE
@@ -31,7 +34,7 @@ $(function () {
                 }
             },
             title: {
-                text: 'Temperatura Anden'
+                text: '{{$AlmacenT->nombre}}'
             },
             xAxis: {
                 type: 'datetime',
@@ -84,7 +87,7 @@ $(function () {
 
 
  <div class="col-md-6">
-<div id="{{$i}}" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+<div id="{{$AlmacenT->id}}" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
 </div>
 
-@endfor
+@endforeach

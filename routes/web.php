@@ -16,7 +16,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-
+Route::get('/home', 'Dashboard@Dashboard');
 Route::get('/HighChartsJS', 'HighChars@HighChars');
 Route::get('/Actualizar_Productos_Almacen', 'ImportControllerCSVProductosAlmacen@ProductosAlmacen');
 Route::post('/importCSVProductosAlmacen', 'ImportControllerCSVProductosAlmacen@importExcel');
