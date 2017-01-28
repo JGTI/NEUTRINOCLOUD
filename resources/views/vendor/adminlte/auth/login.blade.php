@@ -24,7 +24,7 @@
 			
 	    @if (count($errors) > 0)
             <div class="alert alert-danger">
-                <strong>Whoops!</strong> {{ trans('adminlte_lang::message.someproblems') }}<br><br>
+                <strong>Whoops!</strong> Algo Salio Mal<br><br>
                 <ul>
                     @foreach ($errors->all() as $error)
                         <li>{{ $error }}</li>
@@ -35,7 +35,7 @@
 
         <div class="login-box-body">
 		
-			<p class="login-box-msg"><i class="fa fa-key" aria-hidden="true"></i> Iniciar Secion</p>
+			<p class="login-box-msg"><i class="fa fa-key" aria-hidden="true"></i> Iniciar Sesión</p>
 			
 			
         
