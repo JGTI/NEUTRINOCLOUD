@@ -2,8 +2,9 @@
 <script src="https://code.highcharts.com/modules/exporting.js"></script>
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>		
 
- 
- @foreach($Almacen as $AlmacenT)
+<table>
+<tr>
+@foreach($Almacen as $AlmacenT)
 <script type="text/javascript">
 $(function () {
     $(document).ready(function () {
@@ -83,11 +84,10 @@ $(function () {
     });
 });
 </script>
-
-
-<div  class="col-md-3">
+<td>
 <div id="{{$AlmacenT->id}}" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
-<br>
-</div>
-
+</td>
 @endforeach
+</tr>
+</table>
+<br>

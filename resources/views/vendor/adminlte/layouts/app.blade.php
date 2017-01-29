@@ -31,7 +31,7 @@
 				      <div style ="overflow-x:scroll">
                         <div class="row">
                           
-                            @include('adminlte::layouts.Temperaturas.Temperaturas') 
+                            @include('adminlte::layouts.Charts.Temperaturas.Temperaturas') 
                            </div>
                         </div>
                      </div>
@@ -53,10 +53,9 @@
                            </div>
                            <!-- /.box-header -->
                            <div class="box-body">
-                        <div class="row">
-                          
+                        
+						    @include('adminlte::layouts.Charts.Almacen.Almacen') 
                          
-                        </div>
                      </div>
                         </div>
                      </div>

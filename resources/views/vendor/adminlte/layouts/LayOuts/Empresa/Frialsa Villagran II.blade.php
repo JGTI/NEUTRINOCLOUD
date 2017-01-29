@@ -183,7 +183,7 @@
       <!-- FILA 1 -->
       <td></td>
       <!-- FILA 2 -->
-      <td class='Ntooltip bordeTable' id="MASRER">1</td>
+      <td class='Ntooltip bordeTable' id="MASRER"></td>
       <!-- FILA 3 -->
       <td class='Ntooltip bordeTable' id="TEST"></td>
       <!-- FILA 4 -->
@@ -3795,7 +3795,7 @@
       <!-- FILA 8 -->
       <td></td>
       <!-- FILA 9 --><!-- FILA 10 -->
-      <td colspan="2" id="01254" bgcolor="#fff"  style="border:1px solid black"></td>
+      <td colspan="2" id="01254" bgcolor="#fff"  class='Ntooltip bordeTable'></td>
       <!-- FILA 11 -->
       <td id="01253" class='Ntooltip bordeTable' ></td>
       <!-- FILA 12 -->
@@ -8230,7 +8230,10 @@
       <td></td>
    </tr>
 </table>
+
+@foreach($LayOut as $StyleLayOut)
 <script>
-   document.getElementById('MASRER').style.cssText = 'background-color: #923433 !important;';
-   document.getElementById ( "MASRER" ).innerHTML="<span>Producto<br>Camara</span>";
+   document.getElementById('{{$StyleLayOut->Ubicacion}}').style.cssText = 'background-color: #800080 !important;';
+   document.getElementById ( "{{$StyleLayOut->Ubicacion}}").innerHTML="<span>{{$StyleLayOut->DescripciondeProducto}}</span>";
 </script>
+@endforeach
