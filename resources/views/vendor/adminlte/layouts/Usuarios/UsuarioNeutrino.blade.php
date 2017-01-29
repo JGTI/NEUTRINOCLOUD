@@ -50,8 +50,8 @@
                                           <th>Nombre</th>
                                           <th>Email</th>
 										  <th>Rol</th>
-										  <th>Modificar</th>
-										  <th>Eliminar</th>
+										  <th width="90px">Modificar</th>
+										  <th width="90px">Eliminar</th>
                                        </tr>
                                     </thead>
                                  </table>
@@ -95,10 +95,15 @@
       	   {data:'name'},
       	   {data:'email'},
 		   {data:'rol'},
-		   {data:'id'},
-		   {data:'id'},
+		   {data:'modificar'},
+		   {data:'eliminar'},
       		]
           } );
       } );
-   </script>	
+   </script>
+   <script>	
+     function eliminar(id) {
+         alert(id);
+      } 
+   </script>
 </html>

@@ -27,8 +27,16 @@ Route::get('/Agregar_Usuario', 'UsuarioNeutrino@NuevoUsuarioNeutrinoVista');
 Route::post('/Nuevo_Usuario_Neutrino', 'UsuarioNeutrino@NuevoUsuarioNeutrino');
 Route::get('/Ver_layOut', 'LayOut@VistaLayOut');
 Route::get('/api/UsuariosNeutrino', function () {
-	    $Users = App\User::all()->where("status","=", 1);
-        return Datatables::of($Users)->make(true);
+	    $Users =  DB::table('users')
+            ->join('roles', 'users.rol', '=', 'roles.id')
+            ->select('users.id', 'users.name', 'users.email','roles.nombre as rol')
+            ->get();
+			
+        return Datatables::of($Users)->addColumn('modificar', function ($Users) {
+                return '<center><a href="#edit-'.$Users->id.'" class="btn btn-xs btn-naranja"><i class="glyphicon glyphicon-edit"></i></a></center>';
+            })->addColumn('eliminar', function ($Users) {
+			return '<center><a href="#" onclick="eliminar('.$Users->id.');" class="btn btn-xs btn-danger"><i class="fa fa-trash-o" aria-hidden="true"></i></a></center>';
+            })->make(true);
 });
 
 

@@ -23,6 +23,7 @@
                      <div class="box-header with-border">
                         <h3 class="box-title"><i class="fa fa-exchange" aria-hidden="true"></i> Layout </h3>
                         <div class="box-tools pull-right">
+                      <button type="button" class="btn btn-box-tool"  onclick=javascript:window.print();><i class="fa fa-print" aria-hidden="true"></i></button>
                            <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
                            </button>
                            <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>

@@ -26,30 +26,19 @@ table {
 
 table td,
 table th {
-   
     z-index: 1;
     border-right: 0;
     border-bottom: 0;
     width: 150px;
     padding-left: 2px;
     overflow: hidden;
-    height: 3px;
+    height: 10px;
+	font-size:11px;
+	text-align: center;
+	font-weight: bold;
 }
 
-table th:before,
-table td:before {
-    content: "";
-    padding: 0;
-    height: 1px;
-    line-height: 1px;
-    width: 1px;
-    margin: 10px -994px -996px -2px;
-    display: block;
-    border: 0;
-    z-index: -1;
-    position:relative;
-    top: -6px;
-}
+
 
 table th:before {
     border-top: 999px solid #D6D6D6;
@@ -66,4 +55,26 @@ td div.grid_3{
 table .row td{
     border-bottom: #d6d6d6 1px solid;
     width: 110px;
+}
+
+
+
+@media print {
+tr.vendorListHeading {
+    background-color: #1a4567 !important;
+    -webkit-print-color-adjust: exact; 
+}}
+
+@media print {
+    .vendorListHeading th {
+    color: white !important;
+}}
+
+@media print {
+body {-webkit-print-color-adjust: exact;}
+}
+
+
+.bordeTable{
+	border:1px solid black
 }
