@@ -1,3 +1,6 @@
+<a href="#" data-toggle="tooltip" data-placement="top"   data-original-title="Formulario Para Agregar Un Nuevo Usuario A Neutrino">O</a>
+
+
 <table border=0 width="100%">
    
    <!--COLUMNA 1 -->
@@ -187,13 +190,13 @@
       <!-- FILA 1 -->
       <td>&nbsp;</td>
       <!-- FILA 2 -->
-      <td bgcolor="gray" style="border:1px solid black"></td>
+	  <td class='Ntooltip' bgcolor="red" style="border:1px solid black"><span>Producto<br>Camara Ja ja jajajja jajaj jefef e fe f ef e f e f e fe f e f e f e e f e f ef e f e f ffffffffffffffffff ffrefajaj jjjj a a a aaasaas</span></td>
       <!-- FILA 3 -->
       <td bgcolor="gray" style="border:1px solid black">&nbsp;</td>
       <!-- FILA 4 -->
       <td bgcolor="gray" style="border:1px solid black">&nbsp;</td>
       <!-- FILA 5 -->
-      <td bgcolor="gray" style="border:1px solid black">&nbsp;</td>
+       <td class='Ntooltip' bgcolor="red" style="border:1px solid black"><span>Producto<br>Camara</span></td>
       <!-- FILA 6 -->
       <td>&nbsp;</td>
       <!-- FILA 7 -->
@@ -372,7 +375,8 @@
       <!-- FILA 3 -->
       <td bgcolor="gray" style="border:1px solid black">&nbsp;</td>
       <!-- FILA 4 -->
-      <td bgcolor="gray" style="border:1px solid black">&nbsp;</td>
+     <td class='Ntooltip' bgcolor="red" style="border:1px solid black"><span>Producto<br>Camara</span></td>
+     
       <!-- FILA 5 -->
       <td bgcolor="gray" style="border:1px solid black">&nbsp;</td>
       <!-- FILA 6 --> 
@@ -736,7 +740,8 @@
       <!-- FILA 4 -->
       <td bgcolor="gray" style="border:1px solid black">&nbsp;</td>
       <!-- FILA 5 -->
-      <td bgcolor="gray" style="border:1px solid black">&nbsp;</td>
+    <td class='Ntooltip' bgcolor="red" style="border:1px solid black"><span>Producto<br>Camara</span></td>
+     
       <!-- FILA 6 -->
       <td>&nbsp;</td>
       <!-- FILA 7 -->

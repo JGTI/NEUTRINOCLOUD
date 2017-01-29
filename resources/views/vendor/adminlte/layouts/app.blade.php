@@ -27,8 +27,8 @@
                               </div>
                            </div>
                            <!-- /.box-header -->
-                           <div class="box-body">
-				 <div style ="overflow-x:scroll">
+                       <div class="box-body">
+				      <div style ="overflow-x:scroll">
                         <div class="row">
                           
                             @include('adminlte::layouts.Temperaturas.Temperaturas') 

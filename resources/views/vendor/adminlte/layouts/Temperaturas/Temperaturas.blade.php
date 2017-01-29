@@ -4,7 +4,6 @@
 
  
  @foreach($Almacen as $AlmacenT)
- 
 <script type="text/javascript">
 $(function () {
     $(document).ready(function () {
@@ -86,7 +85,7 @@ $(function () {
 </script>
 
 
- <div class="col-md-3">
+<div  class="col-md-3">
 <div id="{{$AlmacenT->id}}" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
 <br>
 </div>
