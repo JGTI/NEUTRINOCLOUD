@@ -1,4 +1,3 @@
-<a href="#" data-toggle="tooltip" data-placement="top"   data-original-title="Formulario Para Agregar Un Nuevo Usuario A Neutrino">O</a>
 
 
 <table border=0 width="100%">

@@ -16,7 +16,7 @@ class Almacen extends Seeder
 		
         try{
             DB::table('almacenes')->insert([
-            'id' => 'LM35AF1',
+            'id' => '10',
 		    'nombre' => 'Camara 10',
 			'status' => DB::table('status')->where('nombre', 'Activo')->first()->id,
 			'empresa' => DB::table('empresas')->where('nombre', 'Querétaro, Qro')->first()->id,
@@ -31,7 +31,7 @@ class Almacen extends Seeder
 		
 		try{
             DB::table('almacenes')->insert([
-            'id' => 'LM35AFT',
+            'id' => '20',
 		    'nombre' => 'Camara 20',
 			'status' => DB::table('status')->where('nombre', 'Activo')->first()->id,
 			'empresa' => DB::table('empresas')->where('nombre', 'Querétaro, Qro')->first()->id,
@@ -44,24 +44,12 @@ class Almacen extends Seeder
         }
 		
 		
-		try{
-            DB::table('almacenes')->insert([
-            'id' => 'LM35AF2T',
-		    'nombre' => 'Camara 10',
-			'status' => DB::table('status')->where('nombre', 'Activo')->first()->id,
-			'empresa' => DB::table('empresas')->where('nombre', 'Querétaro, Qro')->first()->id,
-			'created_at' =>	Carbon::now()->format('Y-m-d H:i:s'),
-			'updated_at' =>	Carbon::now()->format('Y-m-d H:i:s'),
-        ]);
-		}
-		catch(\Exception $e){
-                             //Continua
-        }
+	
 		
 		
 		try{
             DB::table('almacenes')->insert([
-            'id' => 'LM35AF222T',
+            'id' => '30',
 		    'nombre' => 'Camara 30',
 			'status' => DB::table('status')->where('nombre', 'Activo')->first()->id,
 			'empresa' => DB::table('empresas')->where('nombre', 'Querétaro, Qro')->first()->id,
@@ -78,7 +66,7 @@ class Almacen extends Seeder
 		
 		try{
             DB::table('almacenes')->insert([
-            'id' => 'LM135AF2T',
+            'id' => '40',
 		    'nombre' => 'Camara 40',
 			'status' => DB::table('status')->where('nombre', 'Activo')->first()->id,
 			'empresa' => DB::table('empresas')->where('nombre', 'Querétaro, Qro')->first()->id,
@@ -92,7 +80,7 @@ class Almacen extends Seeder
 		
 		try{
             DB::table('almacenes')->insert([
-            'id' => 'LM13sAF2T',
+            'id' => '50',
 		    'nombre' => 'Camara 50',
 			'status' => DB::table('status')->where('nombre', 'Activo')->first()->id,
 			'empresa' => DB::table('empresas')->where('nombre', 'Querétaro, Qro')->first()->id,
@@ -107,8 +95,23 @@ class Almacen extends Seeder
 		
 		try{
             DB::table('almacenes')->insert([
-            'id' => 'LM135TAF2T',
+            'id' => '60',
 		    'nombre' => 'Tunel Rafaga',
+			'status' => DB::table('status')->where('nombre', 'Activo')->first()->id,
+			'empresa' => DB::table('empresas')->where('nombre', 'Querétaro, Qro')->first()->id,
+			'created_at' =>	Carbon::now()->format('Y-m-d H:i:s'),
+			'updated_at' =>	Carbon::now()->format('Y-m-d H:i:s'),
+        ]);
+		}
+		catch(\Exception $e){
+                             //Continua
+        }
+		
+		
+			try{
+            DB::table('almacenes')->insert([
+            'id' => '70',
+		    'nombre' => 'Anden',
 			'status' => DB::table('status')->where('nombre', 'Activo')->first()->id,
 			'empresa' => DB::table('empresas')->where('nombre', 'Querétaro, Qro')->first()->id,
 			'created_at' =>	Carbon::now()->format('Y-m-d H:i:s'),
