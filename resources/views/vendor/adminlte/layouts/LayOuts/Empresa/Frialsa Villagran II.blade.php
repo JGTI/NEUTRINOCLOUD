@@ -8233,7 +8233,10 @@
 
 @foreach($LayOut as $StyleLayOut)
 <script>
+   var Producto=Producto+"{{$StyleLayOut->DescripciondeProducto}}";
    document.getElementById('{{$StyleLayOut->Ubicacion}}').style.cssText = 'background-color: #800080 !important;';
-   document.getElementById ( "{{$StyleLayOut->Ubicacion}}").innerHTML="<span>{{$StyleLayOut->DescripciondeProducto}}</span>";
+   document.getElementById("{{$StyleLayOut->Ubicacion}}").value=document.getElementById("{{$StyleLayOut->Ubicacion}}").value+"{{$StyleLayOut->DescripciondeProducto}}<br>";
+   document.getElementById("{{$StyleLayOut->Ubicacion}}").innerHTML="<span>"+document.getElementById("{{$StyleLayOut->Ubicacion}}").value+"</span>";
+ 
 </script>
 @endforeach
