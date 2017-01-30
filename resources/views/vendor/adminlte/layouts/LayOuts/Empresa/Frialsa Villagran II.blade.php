@@ -8235,8 +8235,11 @@
 <script>
    var Producto=Producto+"{{$StyleLayOut->DescripciondeProducto}}";
    document.getElementById('{{$StyleLayOut->Ubicacion}}').style.cssText = 'background-color: #800080 !important;';
+   if(document.getElementById("{{$StyleLayOut->Ubicacion}}").value==null){
+         document.getElementById("{{$StyleLayOut->Ubicacion}}").value="{{$StyleLayOut->DescripciondeProducto}}<br>";
+   }
    document.getElementById("{{$StyleLayOut->Ubicacion}}").value=document.getElementById("{{$StyleLayOut->Ubicacion}}").value+"{{$StyleLayOut->DescripciondeProducto}}<br>";
-   document.getElementById("{{$StyleLayOut->Ubicacion}}").innerHTML="<span>"+document.getElementById("{{$StyleLayOut->Ubicacion}}").value+"</span>";
+   document.getElementById("{{$StyleLayOut->Ubicacion}}").innerHTML="<span class='row'>"+document.getElementById("{{$StyleLayOut->Ubicacion}}").value+"</span>";
  
 </script>
 @endforeach

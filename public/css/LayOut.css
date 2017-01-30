@@ -10,7 +10,7 @@
    padding: 4px 1;
    background-color: #000; /* el color de fondo por defecto */
    color: #FFFFFF; /* el color de los textos por defecto */
-   font-size:12px;
+   font-size:9px;
    text-align: center;
    border-radius: 6px;
    position: absolute;
@@ -33,7 +33,6 @@ table th {
     padding-left: 2px;
     overflow: hidden;
     height: 10px;
-	font-size:11px;
 	text-align: center;
 	font-weight: bold;
 }
