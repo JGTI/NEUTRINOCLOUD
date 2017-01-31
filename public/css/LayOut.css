@@ -17,6 +17,15 @@
    margin-left: -75px; 
    }
    
+   .StyleUbicacion
+    {
+  
+   color: #000; /* el color de los textos por defecto */
+   font-size:8px;
+   text-align: center;
+   
+   }
+   
 table {
     margin-top: 20px;
     border-collapse: separate;
@@ -29,10 +38,11 @@ table th {
     z-index: 1;
     border-right: 0;
     border-bottom: 0;
-    width: 150px;
+    width: 300px;
     padding-left: 2px;
     overflow: hidden;
     height: 10px;
+	font-size:9px;
 	text-align: center;
 	font-weight: bold;
 }
