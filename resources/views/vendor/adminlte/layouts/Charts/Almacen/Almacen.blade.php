@@ -17,21 +17,21 @@ $(function () {
     var chart = Highcharts.chart('container', {
 
         title: {
-            text: 'Chart.update'
+            text: 'Almacen Region Bagio'
         },
 
         subtitle: {
-            text: 'Plain'
+            text: 'Productos en Almacen'
         },
 
         xAxis: {
-            categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+            categories: ['Queretaro', 'Zamora', 'Villagran 1', 'Villagran 2', 'Irapuato']
         },
 
         series: [{
             type: 'column',
             colorByPoint: true,
-            data: [29.9, 71.5, 106.4, 129.2, 144.0, 176.0, 135.6, 148.5, 216.4, 194.1, 95.6, 54.4],
+            data: [29.9, 71.5, 106.4, 129.2, 1],
             showInLegend: false
         }]
 
@@ -45,7 +45,7 @@ $(function () {
                 polar: false
             },
             subtitle: {
-                text: 'Plain'
+                text: 'Productos'
             }
         });
     });

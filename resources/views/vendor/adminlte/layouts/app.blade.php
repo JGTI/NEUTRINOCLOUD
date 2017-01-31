@@ -53,9 +53,9 @@
                            </div>
                            <!-- /.box-header -->
                            <div class="box-body">
-                        
+                         <div class="col-md-6">
 						    @include('adminlte::layouts.Charts.Almacen.Almacen') 
-                         
+                          </div>
                      </div>
                         </div>
                      </div>
