@@ -26,6 +26,11 @@
    
    }
    
+    .black
+     {
+  background-color:#000;
+   }
+   
 table {
     margin-top: 20px;
     border-collapse: separate;

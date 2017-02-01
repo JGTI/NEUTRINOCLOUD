@@ -34,34 +34,28 @@
                         <div class="row">
                            <div class="col-md-12">
 						
+						<div id="LayOut" style ="overflow-x:scroll">
+	
+          <div class="nav-tabs-custom">
+            <ul class="nav nav-tabs">
+              <li class="active"><a href="#Producto" data-toggle="tab">Productos Almacen</a></li>
+              <li><a href="#Cliente" data-toggle="tab">Estadisticos</a></li>
+            </ul>
+            <div class="tab-content">
+              <div class="active tab-pane" id="Producto">
+              @include('adminlte::layouts.LayOuts.Empresa.LayOuts.Frialsa Villagran II')
+              </div>
+              <div class="tab-pane" id="Cliente">
+               @include('adminlte::layouts.LayOuts.Empresa.Graficas.Estadisticos')
+              </div>
+            </div>
+          </div>
+     
 						       
-                              <div id="LayOut" style ="overflow-x:scroll">
-                                 @include('adminlte::layouts.LayOuts.Empresa.Frialsa Villagran II')
+                              
+                                 
                               </div>
-<script>
-function launchFullScreen(element) {
-  if(element.requestFullScreen) {
-    element.requestFullScreen();
-  } else if(element.mozRequestFullScreen) {
-    element.mozRequestFullScreen();
-  } else if(element.webkitRequestFullScreen) {
-    element.webkitRequestFullScreen();
-  }
-}
 
-
-function cancelFullscreen() {
-  if(document.cancelFullScreen) {
-    document.cancelFullScreen();
-  } else if(document.mozCancelFullScreen) {
-    document.mozCancelFullScreen();
-  } else if(document.webkitCancelFullScreen) {
-    document.webkitCancelFullScreen();
-  }
-}
-
-
-</script>
 
                            </div>
                         </div>

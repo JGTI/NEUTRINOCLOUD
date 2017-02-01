@@ -4,6 +4,7 @@
 	<tbody>
 		<tr>
 			<td style="color:white">0</td>
+			
 			<td style="color:white">0</td>
 			<td style="color:white">0</td>
 			<td style="color:white">0</td>
@@ -1392,8 +1393,8 @@
 			<td></td>
 			<td></td>
 			<td></td>
-			<td></td>
-			<td></td>
+			<td class="black"></td>
+			<td class="black"></td>
 			<td></td>
 			<td class="StyleUbicacion">40</td>
 			<td class="Ntooltip bordeTable"  id="08401"></td>
@@ -1475,8 +1476,8 @@
 			<td></td>
 			<td></td>
 			<td></td>
-			<td></td>
-			<td></td>
+			<td class="black"></td>
+			<td class="black"></td>
 			<td></td>
 			<td class="StyleUbicacion">38</td>
 			<td class="Ntooltip bordeTable"  id="08381"></td>
@@ -1890,8 +1891,8 @@
 			<td></td>
 			<td></td>
 			<td></td>
-			<td></td>
-			<td></td>
+			<td class="black"></td>
+			<td class="black"></td>
 			<td></td>
 			<td class="StyleUbicacion">28</td>
 			<td class="Ntooltip bordeTable"  id="08281"></td>
@@ -1973,8 +1974,8 @@
 			<td></td>
 			<td></td>
 			<td></td>
-			<td></td>
-			<td></td>
+			<td class="black"></td>
+			<td class="black"></td>
 			<td></td>
 			<td class="StyleUbicacion">26</td>
 			<td class="Ntooltip bordeTable"  id="08261"></td>
@@ -2236,8 +2237,8 @@
 			<td class="Ntooltip bordeTable"  id="09191"></td>
 			<td class="StyleUbicacion">19</td>
 			<td></td>
-			<td></td>
-			<td></td>
+			<td class="black"></td>
+			<td class="black"></td>
 			<td class="Ntooltip bordeTable"  id="10232"></td>
 			<td class="Ntooltip bordeTable"  id="10231"></td>
 			<td class="StyleUbicacion">23</td>
@@ -2319,8 +2320,8 @@
 			<td class="Ntooltip bordeTable"  id="09171"></td>
 			<td class="StyleUbicacion">17</td>
 			<td></td>
-			<td></td>
-			<td></td>
+			<td class="black"></td>
+			<td class="black"></td>
 			<td class="Ntooltip bordeTable"  id="10212"></td>
 			<td class="Ntooltip bordeTable"  id="10211"></td>
 			<td class="StyleUbicacion">21</td>
@@ -2388,8 +2389,8 @@
 			<td></td>
 			<td></td>
 			<td></td>
-			<td></td>
-			<td></td>
+			<td class="black"></td>
+			<td class="black"></td>
 			<td></td>
 			<td class="StyleUbicacion">16</td>
 			<td class="Ntooltip bordeTable"  id="08161"></td>
@@ -2471,8 +2472,8 @@
 			<td></td>
 			<td></td>
 			<td></td>
-			<td></td>
-			<td></td>
+			<td class="black"></td>
+			<td class="black"></td>
 			<td></td>
 			<td class="StyleUbicacion">14</td>
 			<td class="Ntooltip bordeTable"  id="08141"></td>
@@ -2886,8 +2887,8 @@
 			<td></td>
 			<td></td>
 			<td></td>
-			<td></td>
-			<td></td>
+			<td class="black"></td>
+			<td class="black"></td>
 			<td></td>
 			<td class="StyleUbicacion">4</td>
 			<td class="Ntooltip bordeTable"  id="08041"></td>
@@ -2969,8 +2970,8 @@
 			<td></td>
 			<td></td>
 			<td></td>
-			<td></td>
-			<td></td>
+			<td class="black"></td>
+			<td class="black"></td>
 			<td></td>
 			<td class="StyleUbicacion">2</td>
 			<td class="Ntooltip bordeTable"  id="08021"></td>
