@@ -2306,7 +2306,7 @@
 			<td></td>
 			<td></td>
 			<td></td>
-			<td class="Ntooltip bordeTable"  id="08132"></td>
+			
 			<td class="Ntooltip bordeTable"  id="08131"></td>
 			<td class="StyleUbicacion">13</td>
 			<td class="StyleUbicacion">18</td>
