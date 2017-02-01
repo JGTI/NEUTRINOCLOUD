@@ -68,7 +68,7 @@
 			
 			
 			<li class="treeview">
-			     <a href="#"><i class='fa fa-link'></i> <span>Administrar Usuarios</span> <i class="fa fa-angle-left pull-right"></i></a>
+			     <a href="#"><i style="font-size:15px;" class="fa fa-refresh fa-spin fa-3x fa-fw"></i></i> <span>Monitoreo de Planta</span> <i class="fa fa-angle-left pull-right"></i></a>
                 <ul class="treeview-menu">
                     <li><a href="{{url('UsuariosNeutrino')}}"><i class='fa fa-link'></i>Usuarios</a></li>
                 </ul>

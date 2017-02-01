@@ -2306,7 +2306,7 @@
 			<td></td>
 			<td></td>
 			<td></td>
-			
+			<td class="Ntooltip bordeTable"  id="08132"></td>
 			<td class="Ntooltip bordeTable"  id="08131"></td>
 			<td class="StyleUbicacion">13</td>
 			<td class="StyleUbicacion">18</td>
@@ -4136,7 +4136,7 @@
 @foreach($LayOut as $StyleLayOut)
 <script>
    var Producto=Producto+"{{$StyleLayOut->DescripciondeProducto}}";
-   document.getElementById('{{$StyleLayOut->Ubicacion}}').style.cssText = 'background-color: #800080 !important;';
+   document.getElementById('{{$StyleLayOut->Ubicacion}}').style.cssText = 'background-color: {{$StyleLayOut->rgb}} !important;';
    if(document.getElementById("{{$StyleLayOut->Ubicacion}}").value==null){
          document.getElementById("{{$StyleLayOut->Ubicacion}}").value="{{$StyleLayOut->DescripciondeProducto}}<br>";
    }
