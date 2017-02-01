@@ -4,9 +4,21 @@
 
 <table>
 <tr>
+<script>
+var f=1;
+</script>
 @foreach($Almacen as $AlmacenT)
 <script type="text/javascript">
 $(function () {
+	
+	if(f==3){
+	var Red='red';
+	}
+	else
+		{
+	var Red='';
+	}
+	f++;
     $(document).ready(function () {
         Highcharts.setOptions({
             global: {
@@ -47,7 +59,7 @@ $(function () {
                 plotLines: [{
                     value: 0,
                     width: 1,
-                    color: '#808080'
+                    color: '#0000'
                 }]
             },
             tooltip: {
@@ -64,7 +76,9 @@ $(function () {
                 enabled: false
             },
             series: [{
+				
                 name: 'Random data',
+				color: ''+Red+'',
                 data: (function () {
                     // generate an array of random data
                     var data = [],
@@ -78,11 +92,13 @@ $(function () {
                         });
                     }
                     return data;
-                }())
+                }()),
+				
+				
             }]
         });
     });
-});
+	});
 </script>
 <td>
 <div id="{{$AlmacenT->id}}" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
