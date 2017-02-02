@@ -41,10 +41,10 @@
 					 
 					 
 					 
-					 <div class="col-md-12">
+					 <div class="col-md-6">
                         <div class="box">
                            <div class="box-header with-border">
-                              <h3 class="box-title">Panel de Control Almacen</h3>
+                              <h3 class="box-title"><i class="fa fa-line-chart" aria-hidden="true"></i> Panel de Control Almacen</h3>
                               <div class="box-tools pull-right">
                                  <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
                                  </button>
@@ -53,12 +53,40 @@
                            </div>
                            <!-- /.box-header -->
                            <div class="box-body">
-                         <div class="col-md-6">
+                         <div class="col-md-12">
 						    @include('adminlte::layouts.Charts.Almacen.Almacen') 
                           </div>
+						   
                      </div>
                         </div>
                      </div>
+					 
+					 
+					 
+					 
+					 
+					 <div class="col-md-6">
+                        <div class="box">
+                           <div class="box-header with-border">
+                              <h3 class="box-title"><i class="fa fa-line-chart" aria-hidden="true"></i> Panel de Control Almacen</h3>
+                              <div class="box-tools pull-right">
+                                 <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                                 </button>
+                                 <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                              </div>
+                           </div>
+                           <!-- /.box-header -->
+                           <div class="box-body">
+                         <div class="col-md-12">
+						    
+                          </div>
+						   
+                     </div>
+                        </div>
+                     </div>
+					 
+					 
+					 
                      <!-- /.box-footer -->
                   </div>
                   <!-- Your Page Content Here -->

@@ -25,12 +25,17 @@ class LayOut extends Controller
      public function VistaLayOut(){
 		 
 	
+	
+	
 			
 	  $LayOut=DB::table('csv_producto_almacenes')
 	  ->join('clientes', 'clientes.id', '=', 'csv_producto_almacenes.Cliente')
 	  ->select('csv_producto_almacenes.DescripciondeProducto','csv_producto_almacenes.Ubicacion', 'clientes.nombre', 'clientes.rgb')
 	  ->where('csv_producto_almacenes.status', $this->Activo)
 	  ->get();
+
+      
+	  
       return view('vendor/adminlte/layouts/LayOuts/LayOut',compact('LayOut'));
     }
 	

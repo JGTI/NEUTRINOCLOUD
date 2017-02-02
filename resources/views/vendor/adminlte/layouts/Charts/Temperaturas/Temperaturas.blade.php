@@ -48,6 +48,9 @@ $(function () {
             title: {
                 text: '{{$AlmacenT->nombre}}'
             },
+			credits: {
+                 enabled: false
+            },
             xAxis: {
                 type: 'datetime',
                 tickPixelInterval: 150

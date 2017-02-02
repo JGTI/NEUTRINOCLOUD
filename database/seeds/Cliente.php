@@ -15,7 +15,7 @@ class Cliente extends Seeder
     {
         try{
             DB::table('clientes')->insert([
-		    'id' => 33,
+		    'id' => 39,
 			'nombre' => 'BACHOCO SA DE CV',
 			'rgb' => '#FF8000',
 			'created_at' =>	Carbon::now()->format('Y-m-d H:i:s'),

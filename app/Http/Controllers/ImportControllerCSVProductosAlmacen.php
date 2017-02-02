@@ -31,6 +31,8 @@ class ImportControllerCSVProductosAlmacen extends Controller
 	
 	public function importExcel(Request $request)
 	{
+		
+		
 
         
 		if($request->hasFile('import_file')){			
@@ -69,6 +71,20 @@ class ImportControllerCSVProductosAlmacen extends Controller
 									}
 				else{
 		             try{
+						 
+						$clientes=DB::table('clientes')->select('clientes.id')->where('clientes.id','=',$data[0])->get();
+	                    if(count($clientes)==0){
+                   
+                                DB::table('clientes')->insert([
+								'id' => $data[0],
+			                    'nombre' => 'DESCONOCIDO',
+			                    'rgb' => '#FFFF88',
+			                    'created_at' =>	Carbon::now()->format('Y-m-d H:i:s'),
+			                    'updated_at' =>	Carbon::now()->format('Y-m-d H:i:s'),
+                                ]);
+		                    
+		                 
+	                       }
 					    DB::table('csv_producto_almacenes')->insert(
                             [					
 							'empresa' => Auth::user()->id,

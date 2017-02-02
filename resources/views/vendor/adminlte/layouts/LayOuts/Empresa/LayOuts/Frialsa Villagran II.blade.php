@@ -4133,6 +4133,8 @@
 	</tbody>
 </table>
 
+
+
 @foreach($LayOut as $StyleLayOut)
 <script>
    var Producto=Producto+"{{$StyleLayOut->DescripciondeProducto}}";
@@ -4145,3 +4147,5 @@
  
 </script>
 @endforeach
+
+
