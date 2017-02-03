@@ -3,7 +3,10 @@
    @section('htmlheader')
    @include('adminlte::layouts.partials.htmlheader')
    @show
-   <link href="../css/LayOut.css" media="all" rel="stylesheet" type="text/css"/>
+   <link href="../../css/LayOut.css" media="all" rel="stylesheet" type="text/css"/>
+   <link href="../../css/Master.css" media="all" rel="stylesheet" type="text/css"/>
+   <link type="image/x-icon" href="../../img/NeutrinoAzulSmall.png" rel="icon" />
+   <link type="image/x-icon" href="../../img/NeutrinoAzulSmall.png" rel="shortcut icon" /> 
    <body class="skin-blue sidebar-mini">
       <div id="app">
       <div class="wrapper">
@@ -17,7 +20,7 @@
                <div class="col-md-12">
                   <div class="box">
                      <div class="box-header with-border">
-                        <h3 class="box-title"><i class="fa fa-exchange" aria-hidden="true"></i> Layout </h3>
+                        <h3 class="box-title"><i class="fa fa-exchange" aria-hidden="true"></i> Layout Region {{$Region}}, {{$Empresa}}</h3>
                         <div class="box-tools pull-right">
                            <button type="button" class="btn btn-box-tool"  data-toggle="tooltip" data-placement="top" title="Maximizar y Minimizar Layout" onclick="Max_Min();"><i class="fa fa-arrows-alt" aria-hidden="true"></i></button>
                            <button type="button" class="btn btn-box-tool"  data-toggle="tooltip" data-placement="top" title="Imprimir Layout" onclick=javascript:window.print();><i class="fa fa-print" aria-hidden="true"></i></button>
@@ -44,7 +47,11 @@
                                     </ul>
                                     <div class="tab-content">
                                        <div class="active tab-pane" id="Producto">
-                                          @include('adminlte::layouts.LayOuts.Empresa.LayOuts.Frialsa Villagran II')
+			
+                                          @include('adminlte::layouts.LayOuts.Empresa.LayOuts.'.$Region.'.'.$Empresa.'')
+										  
+  
+										  
                                        </div>
                                        <div class="tab-pane" id="Cliente">
 							

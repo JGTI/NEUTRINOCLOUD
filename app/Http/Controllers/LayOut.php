@@ -22,9 +22,8 @@ class LayOut extends Controller
         }
 		
 		
-     public function VistaLayOut(){
+     public function VistaLayOut($reg,$emp){
 		 
-	
 	
 	
 			
@@ -32,11 +31,11 @@ class LayOut extends Controller
 	  ->join('clientes', 'clientes.id', '=', 'csv_producto_almacenes.Cliente')
 	  ->select('csv_producto_almacenes.DescripciondeProducto','csv_producto_almacenes.Ubicacion', 'clientes.nombre', 'clientes.rgb')
 	  ->where('csv_producto_almacenes.status', $this->Activo)
-	  ->get();
-
-      
+	  ->get();      
+	  $Region= utf8_encode ($reg);
+	  $Empresa= utf8_encode ($emp);
 	  
-      return view('vendor/adminlte/layouts/LayOuts/LayOut',compact('LayOut'));
+      return view('vendor/adminlte/layouts/LayOuts/LayOut',compact('LayOut','Region','Empresa'));
     }
 	
 }

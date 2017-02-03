@@ -25,7 +25,7 @@ Route::post('/importCSVRecibo', 'ImportControllerCSVRecibo@importExcel');
 Route::get('/UsuariosNeutrino', 'UsuarioNeutrino@UsuarioNeutrinoVista');
 Route::get('/Agregar_Usuario', 'UsuarioNeutrino@NuevoUsuarioNeutrinoVista');
 Route::post('/Nuevo_Usuario_Neutrino', 'UsuarioNeutrino@NuevoUsuarioNeutrino');
-Route::get('/Ver_layOut', 'LayOut@VistaLayOut');
+Route::get('/Ver_layOut/{Region}/{Empresa}', 'LayOut@VistaLayOut');
 Route::get('/api/UsuariosNeutrino', function () {
 	    $Users =  DB::table('users')
             ->join('roles', 'users.rol', '=', 'roles.id')
