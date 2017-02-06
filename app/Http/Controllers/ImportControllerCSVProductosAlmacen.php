@@ -22,9 +22,9 @@ class ImportControllerCSVProductosAlmacen extends Controller
         }
 		
 	public function ProductosAlmacen(){
-		
 	  $Productos = csv_producto_almacene::all()->where("empresa","=", Auth::user()->empresa)->where("status","=", $this->Activo);
-	  $last_update=csv_producto_almacene::select('updated_at')->where("status","=", $this->Activo)->first();
+	  $last_update=csv_producto_almacene::select('updated_at')->where("empresa","=", Auth::user()->empresa)->where("status","=", $this->Activo)->first();
+	 
       return view('vendor/adminlte/layouts/CSV/CSVProductosAlmacen',compact('last_update','Productos'));
     }
 	
@@ -35,7 +35,8 @@ class ImportControllerCSVProductosAlmacen extends Controller
 		
 
         
-		if($request->hasFile('import_file')){			
+		if($request->hasFile('import_file')){
+
 			 $path = $request->file('import_file')->getRealPath();
 		     $handle = fopen($path, "r");
              $IsCorrect=0;
@@ -62,6 +63,7 @@ class ImportControllerCSVProductosAlmacen extends Controller
 	                   ) {
 	                                                              csv_producto_almacene::where("empresa","=", Auth::user()->empresa)
 																			   ->where("status","=", $this->Activo)
+																			   ->where('empresa' ,"=",Auth::user()->empresa)
 																			   ->update(['status'=>$this->Inactivo]);
 
 		                                	                       }
@@ -72,9 +74,10 @@ class ImportControllerCSVProductosAlmacen extends Controller
 				else{
 		             try{
 						 
+						 
+						 
 						$clientes=DB::table('clientes')->select('clientes.id')->where('clientes.id','=',$data[0])->get();
 	                    if(count($clientes)==0){
-                   
                                 DB::table('clientes')->insert([
 								'id' => $data[0],
 			                    'nombre' => 'DESCONOCIDO',
@@ -82,16 +85,25 @@ class ImportControllerCSVProductosAlmacen extends Controller
 			                    'created_at' =>	Carbon::now()->format('Y-m-d H:i:s'),
 			                    'updated_at' =>	Carbon::now()->format('Y-m-d H:i:s'),
                                 ]);
-		                    
-		                 
 	                       }
+						   
+						$numCaracteres=strlen(utf8_encode ($data[3]));
+						$faltantes=5-$numCaracteres;
+						$concatenar0="";
+						for($suma=0;$suma<$faltantes;$suma++){
+							$concatenar0=$concatenar0."0";
+							}
+						$ubicacion=$concatenar0.$data[3];
+							
+					
+						
 					    DB::table('csv_producto_almacenes')->insert(
                             [					
-							'empresa' => Auth::user()->id,
+							'empresa' => Auth::user()->empresa,
 							'Cliente' => utf8_encode ($data[0]),
 	                        'Producto' => utf8_encode ($data[1]),
 	                        'DescripciondeProducto' => utf8_encode ($data[2]),
-	                        'Ubicacion' => utf8_encode ($data[3]),
+	                        'Ubicacion' => $ubicacion,
 	                        'FCaducidad' => utf8_encode ($data[4]),
 	                        'LoteCliente' => utf8_encode ($data[5]),
 	                        'LTarima' => utf8_encode ($data[6]),

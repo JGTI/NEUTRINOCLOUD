@@ -58,53 +58,53 @@
             <li class="treeview">
 			     <a href="#"><i class="fa fa-map-marker" aria-hidden="true"></i> <span>Bajio</span> <i class="fa fa-angle-left pull-right"></i></a>
                 <ul class="treeview-menu">
-				    <li><a href="{{url('Ver_layOut/Bajio/Queretaro_Qro')}}"><i class="fa fa-circle" aria-hidden="true"></i>Querétaro, Qro</a></li>
-                    <li><a href="{{url('Ver_layOut/Error/No_Encontrado')}}"><i class="fa fa-circle" aria-hidden="true"></i>Bajío I, Villagrán, Gto</a></li>
-					<li><a href="{{url('Ver_layOut/Bajio/Bajio_II_Villagran_Gto')}}"><i class="fa fa-circle" aria-hidden="true"></i>Bajío II, Villagrán, Gto</a></li>
-					<li><a href="{{url('Ver_layOut/Error/No_Encontrado')}}"><i class="fa fa-circle" aria-hidden="true"></i>Irapuato, Gto</a></li>
-					<li><a href="{{url('Ver_layOut/Error/No_Encontrado')}}"><i class="fa fa-circle" aria-hidden="true"></i>Zamora, Mich</a></li>
+				    <li><a href="{{url('layout/Querétaro, Qro')}}"><i class="fa fa-circle" aria-hidden="true"></i>Querétaro, Qro</a></li>
+                    <li><a href="{{url('layout/Bajío I, Villagrán, Gto')}}"><i class="fa fa-circle" aria-hidden="true"></i>Bajío I, Villagrán, Gto</a></li>
+					<li><a href="{{url('layout/Bajío II, Villagrán, Gto')}}"><i class="fa fa-circle" aria-hidden="true"></i>Bajío II, Villagrán, Gto</a></li>
+					<li><a href="{{url('layout/Bajío II, Villagrán, Gto')}}"><i class="fa fa-circle" aria-hidden="true"></i>Irapuato, Gto</a></li>
+					<li><a href="{{url('layout/Zamora, Mich')}}"><i class="fa fa-circle" aria-hidden="true"></i>Zamora, Mich</a></li>
                 </ul>
             </li>
 			<li class="treeview">
 			     <a href="#"><i class="fa fa-map-marker" aria-hidden="true"></i> <span>Norte</span> <i class="fa fa-angle-left pull-right"></i></a>
                 <ul class="treeview-menu">
-                    <li><a href="{{url('Ver_layOut/Error/No_Encontrado')}}"><i class="fa fa-circle" aria-hidden="true"></i>Monterrey, NL</a></li>
-					<li><a href="{{url('Ver_layOut/Error/No_Encontrado')}}"><i class="fa fa-circle" aria-hidden="true"></i>Monterrey ll, NL</a></li>
-					<li><a href="{{url('Ver_layOut/Error/No_Encontrado')}}"><i class="fa fa-circle" aria-hidden="true"></i>Colombia, NL</a></li>
-					<li><a href="{{url('Ver_layOut/Error/No_Encontrado')}}"><i class="fa fa-circle" aria-hidden="true"></i>Laguna Torreón, Coah</a></li>
-					<li><a href="{{url('Ver_layOut/Error/No_Encontrado')}}"><i class="fa fa-circle" aria-hidden="true"></i>Culiacán, Sin</a></li>
+                    <li><a href="{{url('layout/Monterrey, NL')}}"><i class="fa fa-circle" aria-hidden="true"></i>Monterrey, NL</a></li>
+					<li><a href="{{url('layout/Monterrey ll, NL')}}"><i class="fa fa-circle" aria-hidden="true"></i>Monterrey ll, NL</a></li>
+					<li><a href="{{url('layout/Colombia, NL')}}"><i class="fa fa-circle" aria-hidden="true"></i>Colombia, NL</a></li>
+					<li><a href="{{url('layout/Laguna Torreón, Coah')}}"><i class="fa fa-circle" aria-hidden="true"></i>Laguna Torreón, Coah</a></li>
+					<li><a href="{{url('layout/Culiacán, Sin')}}"><i class="fa fa-circle" aria-hidden="true"></i>Culiacán, Sin</a></li>
                 </ul>
             </li>
 			<li class="treeview">
 			     <a href="#"><i class="fa fa-map-marker" aria-hidden="true"></i><span>Occidente</span> <i class="fa fa-angle-left pull-right"></i></a>
                 <ul class="treeview-menu">
-                    <li><a href="{{url('Ver_layOut/Error/No_Encontrado')}}"><i class="fa fa-circle" aria-hidden="true"></i>Aguascalientes, Ags</a></li>
-					<li><a href="{{url('Ver_layOut/Error/No_Encontrado')}}"><i class="fa fa-circle" aria-hidden="true"></i>Guadalajara I, Jal</a></li>
-					<li><a href="{{url('Ver_layOut/Error/No_Encontrado')}}"><i class="fa fa-circle" aria-hidden="true"></i>Guadalajara II, Jal</a></li>
+                    <li><a href="{{url('layout/Aguascalientes, Ags')}}"><i class="fa fa-circle" aria-hidden="true"></i>Aguascalientes, Ags</a></li>
+					<li><a href="{{url('layout/Guadalajara I, Jal')}}"><i class="fa fa-circle" aria-hidden="true"></i>Guadalajara I, Jal</a></li>
+					<li><a href="{{url('layout/Guadalajara II, Jal')}}"><i class="fa fa-circle" aria-hidden="true"></i>Guadalajara II, Jal</a></li>
                 </ul>
             </li>
 			<li class="treeview">
 			     <a href="#"><i class="fa fa-map-marker" aria-hidden="true"></i><span>Tijuana</span> <i class="fa fa-angle-left pull-right"></i></a>
                 <ul class="treeview-menu">
-                    <li><a href="{{url('Ver_layOut/Error/No_Encontrado')}}"><i class="fa fa-circle" aria-hidden="true"></i>Tijuana, BC</a></li>
+                    <li><a href="{{url('layout/Tijuana, BC')}}"><i class="fa fa-circle" aria-hidden="true"></i>Tijuana, BC</a></li>
                 </ul>
             </li>
 			<li class="treeview">
 			     <a href="#"><i class="fa fa-map-marker" aria-hidden="true"></i> <span>Centro</span> <i class="fa fa-angle-left pull-right"></i></a>
                 <ul class="treeview-menu">
-                    <li><a href="{{url('Ver_layOut/Error/No_Encontrado')}}"><i class="fa fa-circle" aria-hidden="true"></i>Cuautitlán I, Mex</a></li>
-					<li><a href="{{url('Ver_layOut/Error/No_Encontrado')}}"><i class="fa fa-circle" aria-hidden="true"></i>Cuautitlán II, Mex</a></li>
-					<li><a href="{{url('Ver_layOut/Error/No_Encontrado')}}"><i class="fa fa-circle" aria-hidden="true"></i>Tlalnepantla, Mex</a></li>
-					<li><a href="{{url('Ver_layOut/Error/No_Encontrado')}}"><i class="fa fa-circle" aria-hidden="true"></i>Ocoyoacac, Mex</a></li>
-					<li><a href="{{url('Ver_layOut/Error/No_Encontrado')}}"><i class="fa fa-circle" aria-hidden="true"></i>San Martín Obispo, Mex</a></li>
-					<li><a href="{{url('Ver_layOut/Error/No_Encontrado')}}"><i class="fa fa-circle" aria-hidden="true"></i>Tula, Hgo</a></li>
-					<li><a href="{{url('Ver_layOut/Error/No_Encontrado')}}"><i class="fa fa-circle" aria-hidden="true"></i>Tepeji del Río, Hgo</a></li>
+                    <li><a href="{{url('layout/Cuautitlán I, Mex')}}"><i class="fa fa-circle" aria-hidden="true"></i>Cuautitlán I, Mex</a></li>
+					<li><a href="{{url('layout/Cuautitlán II, Mex')}}"><i class="fa fa-circle" aria-hidden="true"></i>Cuautitlán II, Mex</a></li>
+					<li><a href="{{url('layout/Tlalnepantla, Mex')}}"><i class="fa fa-circle" aria-hidden="true"></i>Tlalnepantla, Mex</a></li>
+					<li><a href="{{url('layout/Ocoyoacac, Mex')}}"><i class="fa fa-circle" aria-hidden="true"></i>Ocoyoacac, Mex</a></li>
+					<li><a href="{{url('layout/San Martín Obispo, Mex')}}"><i class="fa fa-circle" aria-hidden="true"></i>San Martín Obispo, Mex</a></li>
+					<li><a href="{{url('layout/Tula, Hgo')}}"><i class="fa fa-circle" aria-hidden="true"></i>Tula, Hgo</a></li>
+					<li><a href="{{url('layout/Tepeji del Río, Hgo')}}"><i class="fa fa-circle" aria-hidden="true"></i>Tepeji del Río, Hgo</a></li>
                 </ul>
             </li>
 			<li class="treeview">
 			     <a href="#"><i class="fa fa-map-marker" aria-hidden="true"></i> <span>Cancun</span> <i class="fa fa-angle-left pull-right"></i></a>
                 <ul class="treeview-menu">
-                    <li><a href="{{url('Ver_layOut')}}"><i class="fa fa-circle" aria-hidden="true"></i>Cancún, QR</a></li>
+                    <li><a href="{{url('layout/Cancún, QR')}}"><i class="fa fa-circle" aria-hidden="true"></i>Cancún, QR</a></li>
                 </ul>
             </li>
 			
@@ -125,7 +125,8 @@
 			<li class="treeview">
 			     <a href="#"><i class="fa fa-cogs" aria-hidden="true"></i> <span> Administracion Neutrino</span> <i class="fa fa-angle-left pull-right"></i></a>
                 <ul class="treeview-menu">
-                    <li><a href="{{url('UsuariosNeutrino')}}"><i class="fa fa-user" aria-hidden="true"></i>Usuarios</a></li>
+                    <li><a href="{{url('Usuarios')}}"><i class="fa fa-user" aria-hidden="true"></i>Usuarios</a></li>
+					<li><a href="{{url('Clientes')}}"><i class="fa fa-users" aria-hidden="true"></i>Clientes</a></li>
                 </ul>
             </li>
 			

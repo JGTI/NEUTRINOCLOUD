@@ -14,7 +14,7 @@ use App\User;
 
 
 
-class UsuarioNeutrino extends Controller
+class Cliente extends Controller
 {
 	 
 	 public $Roles;
@@ -29,9 +29,9 @@ class UsuarioNeutrino extends Controller
 			$this->Inactivo = DB::table('Status')->where('nombre', 'Inactivo')->first()->id;
         }
 		
-     public function UsuarioNeutrinoVista(){
+     public function ClientesVista(){
 
-      return view('vendor/adminlte/layouts/Usuarios/UsuarioNeutrino');
+      return view('vendor/adminlte/layouts/Clientes/UsuarioNeutrino');
     }
 	
 	public function NuevoUsuarioNeutrinoVista(){
@@ -41,7 +41,7 @@ class UsuarioNeutrino extends Controller
     	$Roles=$this->Roles;
 		
 	  
-      return view('vendor/adminlte/layouts/Usuarios/NuevoUsuarioNeutrino',compact('Empresas_Region_User','Roles'));
+      return view('vendor/adminlte/layouts/Clientes/NuevoUsuarioNeutrino',compact('Empresas_Region_User','Roles'));
     }
 	
 	public function NuevoUsuarioNeutrino(Request $request){

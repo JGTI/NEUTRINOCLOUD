@@ -17,8 +17,8 @@
                 <div class="pull-left image">
                     <img src="img/NeutrinoAzulGrande.png" class="img-circle" alt="User Image" />
                 </div>
-                <div class="pull-left info image">
-                    <strong>NEUTRINO 4.0 </strong>
+                <div style="font-size:28px;"class="pull-left info image">
+                    <strong> NEUTRINO CLOUD </strong>
                 </div>
         </div>
 			
@@ -34,12 +34,12 @@
         @endif
 
         <div class="login-box-body">
-		
-			<p class="login-box-msg"><i class="fa fa-key" aria-hidden="true"></i> Iniciar Sesión</p>
-			
-			
+		<center>
+			<i style="font-size:20px;color:#1f4871;" class="fa fa-cloud" aria-hidden="true"></i> Iniciar Sesión   <br>
+		</center>
         
         <form action="{{ url('/login') }}" method="post">
+		<br>
             <input type="hidden" name="_token" value="{{ csrf_token() }}">
             <div class="form-group has-feedback">
                 <input type="email" class="form-control" placeholder="{{ trans('adminlte_lang::message.email') }}" name="email" required/>
