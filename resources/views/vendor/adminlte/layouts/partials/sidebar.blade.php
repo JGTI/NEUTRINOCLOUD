@@ -61,7 +61,7 @@
 				    <li><a href="{{url('layout/Querétaro, Qro')}}"><i class="fa fa-circle" aria-hidden="true"></i>Querétaro, Qro</a></li>
                     <li><a href="{{url('layout/Bajío I, Villagrán, Gto')}}"><i class="fa fa-circle" aria-hidden="true"></i>Bajío I, Villagrán, Gto</a></li>
 					<li><a href="{{url('layout/Bajío II, Villagrán, Gto')}}"><i class="fa fa-circle" aria-hidden="true"></i>Bajío II, Villagrán, Gto</a></li>
-					<li><a href="{{url('layout/Bajío II, Villagrán, Gto')}}"><i class="fa fa-circle" aria-hidden="true"></i>Irapuato, Gto</a></li>
+					<li><a href="{{url('layout/Irapuato, Gto')}}"><i class="fa fa-circle" aria-hidden="true"></i>Irapuato, Gto</a></li>
 					<li><a href="{{url('layout/Zamora, Mich')}}"><i class="fa fa-circle" aria-hidden="true"></i>Zamora, Mich</a></li>
                 </ul>
             </li>

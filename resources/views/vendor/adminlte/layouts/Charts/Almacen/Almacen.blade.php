@@ -27,6 +27,11 @@ $(function () {
         xAxis: {
             categories: [<?php echo join($ArrayEmpresas, ',') ?>]
         },
+		
+
+  credits: {
+      enabled: false
+  },
 
         series: [{
             type: 'column',
@@ -45,7 +50,7 @@ $(function () {
                 polar: false
             },
             subtitle: {
-                text: 'Productos'
+                text: 'Barras'
             }
         });
     });

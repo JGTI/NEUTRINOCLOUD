@@ -36,23 +36,25 @@ class Dashboard extends Controller
 		
 		$AlmacenesArray=DB::table('csv_producto_almacenes')
 		->join('empresas','empresas.id','csv_producto_almacenes.empresa')
-		->select('empresas.nombre as nombre','empresas.id as id')
+		->select('empresas.nombre as nombre',DB::raw('count(*) as total'))
 		->where('empresas.status', $this->Activo)
+		->where('csv_producto_almacenes.status', $this->Activo)
 		->where('empresas.region',$Region_Id)
 		->groupBy('empresas.nombre')
-		->get()->toArray();
+		->get()
+		;
+		
 		
 		
 		$x=0;
+		$ArrayEmpresas[$x]="";
+		$ArrarProductos[$x]="";
 		foreach($AlmacenesArray as $AlmacenesA){
 			$ArrayEmpresas[$x] = "'".$AlmacenesA->nombre."'";
-			$ArrarProductos[$x] = $AlmacenesA->id;
+			$ArrarProductos[$x] = $AlmacenesA->total;
 		$x++;
 		}
 	
-		
-		
-		
 		return view('vendor.adminlte.layouts.app',compact('Almacen','Region','ArrayEmpresas','ArrarProductos'));
     }
 }
