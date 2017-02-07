@@ -37,5 +37,27 @@ class Status extends Seeder
                              //Continua
         }
 		
+		try{
+		DB::table('status')->insert([
+		    'id' => 3,
+            'nombre' => 'Estable',
+            'created_at'				=>	Carbon::now()->format('Y-m-d H:i:s'),
+        ]);
+		}
+		catch(\Exception $e){
+                             //Continua
+        }
+		
+		try{
+		DB::table('status')->insert([
+		    'id' => 4,
+            'nombre' => 'Inestable',
+            'created_at'				=>	Carbon::now()->format('Y-m-d H:i:s'),
+        ]);
+		}
+		catch(\Exception $e){
+                             //Continua
+        }
+		
     }
 }

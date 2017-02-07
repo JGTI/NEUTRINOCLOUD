@@ -49,7 +49,7 @@ Route::get('/api/Clientes', function () {
             })
 			
 			->addColumn('nombre', function ($Clients) {
-                return '<input  style="height:20px;width:100%;" type="text" class="form-control" value="'.$Clients->nombre.'"></input>';
+                return '<input  style="height:20px;width:100%;" type="text" class="input form-control" value="'.$Clients->nombre.'"></input>';
             })
 			
 		    ->addColumn('rgbColor', function ($Clients) {

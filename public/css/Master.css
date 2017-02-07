@@ -1,3 +1,6 @@
+.input{color:black;}
+.blue{color:blue;}
+
 	.text {
   font-size:28px;
   font-family:helvetica;
@@ -150,3 +153,6 @@ textarea:focus, input:focus {
     color: white;
 }
 
+input.text{
+    background-color: black;
+}

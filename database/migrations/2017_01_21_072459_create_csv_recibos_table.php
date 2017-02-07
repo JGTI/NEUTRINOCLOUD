@@ -16,7 +16,7 @@ class CreateCsvRecibosTable extends Migration
         Schema::create('csv_recibos', function (Blueprint $table) {
             $table->increments('id');
 			$table->integer('tipo');
-            $table->foreign('tipo')->references('id')->on('csv_recibo_tipos');
+            $table->foreign('tipo')->references('id')->on('csv_tipos');
 			$table->integer('empresa');
             $table->foreign('empresa')->references('id')->on('empresas');
 			$table->integer('Cliente');

@@ -22,15 +22,16 @@ class ImportControllerCSVRecibo extends Controller
 	public function __construct(){
             $this->Activo = DB::table('Status')->where('nombre', 'Activo')->first()->id;
 			$this->Inactivo = DB::table('Status')->where('nombre', 'Inactivo')->first()->id;
-			$this->Maximo = DB::table('csv_recibo_tipos')->where('nombre', 'Maximo')->first()->id;
-			$this->Minimo = DB::table('csv_recibo_tipos')->where('nombre', 'Minimo')->first()->id;
+			$this->Maximo = DB::table('csv_tipos')->where('nombre', 'Maximo')->first()->id;
+			$this->Minimo = DB::table('csv_tipos')->where('nombre', 'Minimo')->first()->id;
 			
         }
 		
 		
     public function Recibo($tipo){
-	  $Recibo = csv_recibo::all()->where("empresa","=", Auth::user()->empresa)->where("status","=", $this->Activo)->where("tipo","=", $this->$tipo);
-	  $last_update=csv_recibo::select('updated_at')->where("status","=", $this->Activo)->where("tipo","=", $this->$tipo)->first();
+		
+	 $Recibo = csv_recibo::all()->where("empresa","=", Auth::user()->empresa)->where("status","=", $this->Activo)->where("tipo","=", $this->$tipo);
+	 $last_update=csv_recibo::select('updated_at')->where("status","=", $this->Activo)->where("tipo","=", $this->$tipo)->first();
       return view('vendor/adminlte/layouts/CSV/CSVRecibo',compact('last_update','Recibo','tipo'));
     }
 	
@@ -80,10 +81,12 @@ class ImportControllerCSVRecibo extends Controller
 			                }
 									}
 				else{
+					
 		             try{
+					  if($data[0]!=""){
 					    DB::table('csv_recibos')->insert(
                             ['tipo' => $this->$tipo,
-							'empresa' => Auth::user()->id,
+							'empresa' => Auth::user()->empresa,
 							'Cliente' => utf8_encode ($data[0]),
 							'NumerodeRecibo' => utf8_encode ($data[1]),
 							'ReferenciaRecibo' => utf8_encode ($data[2]),
@@ -109,12 +112,15 @@ class ImportControllerCSVRecibo extends Controller
 							'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
 							]);
 						}
-						catch(\Exception $e){
+						                      
+					}
+					catch(\Exception $e){
                              return back()->with('success','CSV Actualizado Con Exito.');
-                                            }
+                                            } 
 			        }		
 	            $IsCorrect++;
-            }			  
+            }
+            return back()->with('success','CSV Actualizado Con Exito.');			
 
 		}
 	}	

@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateCsvReciboTiposTable extends Migration
+class CreateCsvEmbarquesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,8 @@ class CreateCsvReciboTiposTable extends Migration
      */
     public function up()
     {
-        Schema::create('csv_recibo_tipos', function (Blueprint $table) {
-            $table->integer('id');
-			$table->primary('id');
-			$table->string('nombre');
+        Schema::create('csv_embarques', function (Blueprint $table) {
+            $table->increments('id');
             $table->timestamps();
         });
     }
@@ -28,6 +26,6 @@ class CreateCsvReciboTiposTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('csv_recibo_tipos');
+        Schema::dropIfExists('csv_embarques');
     }
 }

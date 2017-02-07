@@ -15,7 +15,7 @@ class CSVReciboTipo extends Seeder
     {
 		
 		try{
-        DB::table('csv_recibo_tipos')->insert([
+        DB::table('csv_tipos')->insert([
 		    'id' => 1,
             'nombre' => 'Maximo',
             'created_at'				=>	Carbon::now()->format('Y-m-d H:i:s'),
@@ -28,7 +28,7 @@ class CSVReciboTipo extends Seeder
 		
 		
 		try{
-		DB::table('csv_recibo_tipos')->insert([
+		DB::table('csv_tipos')->insert([
 		    'id' => 2,
             'nombre' => 'Minimo',
             'created_at'				=>	Carbon::now()->format('Y-m-d H:i:s'),

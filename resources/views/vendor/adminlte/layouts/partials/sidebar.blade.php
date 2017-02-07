@@ -38,8 +38,8 @@
 			<li class="treeview">
 			     <a href="#"><i class="fa fa-file-excel-o" aria-hidden="true"></i> <span>Embarque</span> <i class="fa fa-angle-left pull-right"></i></a>
                 <ul class="treeview-menu">
-                    <li><a href="#"><i class="fa fa-plus-square" aria-hidden="true"></i>Maximo</a></li>
-                    <li><a href="#"><i class="fa fa-minus-square" aria-hidden="true"></i>Minimo</a></li>
+                    <li><a href="{{url('Actualizar_Embarque/Maximo')}}"><i class="fa fa-plus-square" aria-hidden="true"></i>Maximo</a></li>
+                    <li><a href="{{url('Actualizar_Embarque/Minimo')}}"><i class="fa fa-minus-square" aria-hidden="true"></i>Minimo</a></li>
                 </ul>
             </li>
                 </ul>

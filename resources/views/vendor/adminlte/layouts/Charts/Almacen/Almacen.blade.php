@@ -17,7 +17,7 @@ $(function () {
     var chart = Highcharts.chart('container', {
 
         title: {
-            text: 'Almacen Region Bagio'
+            text: 'Region {{$Region}}'
         },
 
         subtitle: {
@@ -25,13 +25,13 @@ $(function () {
         },
 
         xAxis: {
-            categories: ['Queretaro', 'Zamora', 'Villagran 1', 'Villagran 2', 'Irapuato']
+            categories: [<?php echo join($ArrayEmpresas, ',') ?>]
         },
 
         series: [{
             type: 'column',
             colorByPoint: true,
-            data: [29.9, 71.5, 106.4, 129.2, 1],
+            data: [<?php echo join($ArrarProductos, ',') ?>],
             showInLegend: false
         }]
 

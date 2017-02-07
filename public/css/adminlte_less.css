@@ -1251,7 +1251,7 @@ a:focus {
 .form-control::-moz-placeholder,
 .form-control:-ms-input-placeholder,
 .form-control::-webkit-input-placeholder {
-  color: #bbb;
+  color: black;
   opacity: 1;
 }
 .form-control:not(select) {

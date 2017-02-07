@@ -82,41 +82,85 @@
                         <li class="footer"><a href="#">{{ trans('adminlte_lang::message.viewall') }}</a></li>
                     </ul>
                 </li>
-                <!-- Tasks Menu -->
-                <li class="dropdown tasks-menu">
-                    <!-- Menu Toggle Button -->
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                        <i class="fa fa-flag-o"></i>
-                        <span class="label label-danger">9</span>
+             
+		<li class="dropdown messages-menu">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              <i class="fa fa-envelope-o"></i>
+              <span class="label label-danger">4</span>
+            </a>
+            <ul class="dropdown-menu">
+              <li class="header">You have 4 messages</li>
+              <li>
+                <!-- inner menu: contains the actual data -->
+                <ul class="menu">
+                  <li><!-- start message -->
+                    <a href="#">
+                      <div class="pull-left">
+                        <img src="{{ Gravatar::get($user->email) }}" class="img-circle" alt="User Image">
+                      </div>
+                      <h4>
+                        Support Team
+                        <small><i class="fa fa-clock-o"></i> 5 mins</small>
+                      </h4>
+                      <p>Why not buy a new awesome theme?</p>
                     </a>
-                    <ul class="dropdown-menu">
-                        <li class="header">{{ trans('adminlte_lang::message.tasks') }}</li>
-                        <li>
-                            <!-- Inner menu: contains the tasks -->
-                            <ul class="menu">
-                                <li><!-- Task item -->
-                                    <a href="#">
-                                        <!-- Task title and progress text -->
-                                        <h3>
-                                            {{ trans('adminlte_lang::message.tasks') }}
-                                            <small class="pull-right">20%</small>
-                                        </h3>
-                                        <!-- The progress bar -->
-                                        <div class="progress xs">
-                                            <!-- Change the css width attribute to simulate progress -->
-                                            <div class="progress-bar progress-bar-aqua" style="width: 20%" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
-                                                <span class="sr-only">20% {{ trans('adminlte_lang::message.complete') }}</span>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </li><!-- end task item -->
-                            </ul>
-                        </li>
-                        <li class="footer">
-                            <a href="#">{{ trans('adminlte_lang::message.alltasks') }}</a>
-                        </li>
-                    </ul>
-                </li>
+                  </li>
+                  <!-- end message -->
+                  <li>
+                    <a href="#">
+                      <div class="pull-left">
+                        <img src="{{ Gravatar::get($user->email) }}" class="img-circle" alt="User Image">
+                      </div>
+                      <h4>
+                        AdminLTE Design Team
+                        <small><i class="fa fa-clock-o"></i> 2 hours</small>
+                      </h4>
+                      <p>Why not buy a new awesome theme?</p>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <div class="pull-left">
+                        <img src="{{ Gravatar::get($user->email) }}" class="img-circle" alt="User Image">
+                      </div>
+                      <h4>
+                        Developers
+                        <small><i class="fa fa-clock-o"></i> Today</small>
+                      </h4>
+                      <p>Why not buy a new awesome theme?</p>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <div class="pull-left">
+                        <img src="{{ Gravatar::get($user->email) }}" class="img-circle" alt="User Image">
+                      </div>
+                      <h4>
+                        Sales Department
+                        <small><i class="fa fa-clock-o"></i> Yesterday</small>
+                      </h4>
+                      <p>Why not buy a new awesome theme?</p>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <div class="pull-left">
+                        <img src="{{ Gravatar::get($user->email) }}" class="img-circle" alt="User Image">
+                      </div>
+                      <h4>
+                        Reviewers
+                        <small><i class="fa fa-clock-o"></i> 2 days</small>
+                      </h4>
+                      <p>Why not buy a new awesome theme?</p>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="footer"><a href="#">See All Messages</a></li>
+            </ul>
+          </li>
+		  
+		  
                 @if (Auth::guest())
                     <li><a href="{{ url('/register') }}">{{ trans('adminlte_lang::message.register') }}</a></li>
                     <li><a href="{{ url('/login') }}">{{ trans('adminlte_lang::message.login') }}</a></li>
@@ -136,39 +180,45 @@
                                 <img src="{{ Gravatar::get($user->email) }}" class="img-circle" alt="User Image" />
                                 <p>
                                     {{ Auth::user()->name }}
-                                    <small>{{ trans('adminlte_lang::message.login') }} Nov. 2012</small>
+                                    <small>Frialsa Frigorificos S.A de C.V</small>
                                 </p>
                             </li>
                             <!-- Menu Body -->
                             <li class="user-body">
-                                <div class="col-xs-4 text-center">
-                                    <a href="#">{{ trans('adminlte_lang::message.followers') }}</a>
-                                </div>
-                                <div class="col-xs-4 text-center">
-                                    <a href="#">{{ trans('adminlte_lang::message.sales') }}</a>
-                                </div>
-                                <div class="col-xs-4 text-center">
-                                    <a href="#">{{ trans('adminlte_lang::message.friends') }}</a>
+                                <div class="col-xs-12 text-center">
+                                  Soluciones Logísticas Para la Cadena de Frio
                                 </div>
                             </li>
                             <!-- Menu Footer-->
                             <li class="user-footer">
-                                <div class="pull-left">
-                                    <a href="{{ url('/settings') }}" class="btn btn-default btn-flat">{{ trans('adminlte_lang::message.profile') }}</a>
-                                </div>
-                                <div class="pull-right">
-                                    <a href="{{ url('/logout') }}" class="btn btn-default btn-flat"
+                                
+								
+								
+<div class="input-group margin-bottom-sm">
+  <span class="input-group-addon"><i class="btn-link  fa fa-cog" aria-hidden="true"></i></span>
+  <a href="{{ url('/settings') }}" class="blue form-control">Configurar Cuenta</a>
+</div>
+<div class="input-group margin-bottom-sm">
+  <span class="input-group-addon"><i style="width:12px;" class="btn-link fa fa-sign-out" aria-hidden="true"></i></span>
+  <a href="{{ url('/logout') }}" class="blue  form-control"
                                        onclick="event.preventDefault();
                                                  document.getElementById('logout-form').submit();">
-                                        {{ trans('adminlte_lang::message.signout') }}
+                                          Cerrar Sesión
                                     </a>
+</div>
+
+
+                                    
+                             
+                                
+                                    
 
                                     <form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">
                                         {{ csrf_field() }}
                                         <input type="submit" value="logout" style="display: none;">
                                     </form>
 
-                                </div>
+                               
                             </li>
                         </ul>
                     </li>
