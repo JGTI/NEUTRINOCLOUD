@@ -1,4 +1,4 @@
-<!-- Main Header -->
+
 <link href="../css/Master.css" media="all" rel="stylesheet" type="text/css"/>
 <header class="main-header">
 
@@ -20,14 +20,16 @@
         <!-- Navbar Right Menu -->
         <div class="navbar-custom-menu">
             <ul class="nav navbar-nav">
-			
+			@include('adminlte::layouts.Alerts.Alarma')
 			
 			   <!-- Tasks Menu -->
-                <li class=" dropdown tasks-menu">
+                <li  style="display: none;" id="SensoresAlerta" class="dropdown tasks-menu">
                     <!-- Menu Toggle Button -->
+					
                     <a href="#" class="parpadea text dropdown-toggle" data-toggle="dropdown">
                         <i style="color:yellow;font-size:17px;" class=" fa fa-warning"></i>
                     </a>
+				   
                     <ul class="dropdown-menu">
                         <li class="header">Problemas</li>
                         <li>
