@@ -33,11 +33,12 @@
                         <li>
                             <!-- Inner menu: contains the tasks -->
                             <ul class="menu">
-                                <li><!-- Task item -->
+                                <li>
                                     <a href="#">
                                         <!-- Task title and progress text -->
                                         <h3>
-                                           Camara 10  
+                                           Camara 10 en rango de Temperatura</br>
+										   Frialsa Queretaro
                                             <small class="pull-right">-3°</small>
                                         </h3>
                                         <!-- The progress bar -->
@@ -48,7 +49,24 @@
                                             </div>
                                         </div>
                                     </a>
-                                </li><!-- end task item -->
+                                </li>
+								
+								
+								 <li>
+                                    <a href="#">
+                                        <!-- Task title and progress text -->
+                                        <h3>
+                                            <i class="fa fa-warning text-aqua"></i> Fuga de Gas Amoniaco</br>
+										   Frialsa Queretaro
+                                            <small class="pull-right">-3°</small>
+                                        </h3>
+                                    </a>
+                                </li>
+								
+								
+								
+								
+								
                             </ul>
                         </li>
                         <li class="footer">

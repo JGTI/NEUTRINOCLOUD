@@ -1,0 +1,18 @@
+ 
+
+
+<audio id="Alerta" src="Alerta.mp3" controls autoplay loop></audio>
+<button id="parar" onclick="parar();">PARAR</button>
+<button id="Reproducir" onclick="reproducir();">REPRODUCIR</button>
+
+<script>
+var vid = document.getElementById("Alerta");
+function parar(){
+    vid.autoplay = false;
+    vid.load();
+}
+function reproducir(){
+    vid.autoplay = true;
+	vid.load();
+}
+</script>

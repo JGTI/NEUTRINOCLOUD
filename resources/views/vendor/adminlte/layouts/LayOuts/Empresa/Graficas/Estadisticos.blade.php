@@ -68,5 +68,5 @@ $(function () {
 <script src="https://code.highcharts.com/modules/data.js"></script>
 <script src="https://code.highcharts.com/modules/drilldown.js"></script>
 <table width="100%">
-<div id="container" style="width: 70%;  margin: 0 auto"></div>
+<div id="container"></div>
 </table>

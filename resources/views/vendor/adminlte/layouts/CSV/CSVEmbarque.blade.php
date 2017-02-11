@@ -1,10 +1,32 @@
 <!DOCTYPE html>
-
+<!--
+   This is a starter template page. Use this page to start your new project from
+   scratch. This page gets rid of all links and provides the needed markup only.
+   -->
 <html lang="en">
    @section('htmlheader')
    @include('adminlte::layouts.partials.htmlheader')
    @show
-
+   <!--
+      BODY TAG OPTIONS:
+      =================
+      Apply one or more of the following classes to get the
+      desired effect
+      |---------------------------------------------------------|
+      | SKINS         | skin-blue                               |
+      |               | skin-black                              |
+      |               | skin-purple                             |
+      |               | skin-yellow                             |
+      |               | skin-red                                |
+      |               | skin-green                              |
+      |---------------------------------------------------------|
+      |LAYOUT OPTIONS | fixed                                   |
+      |               | layout-boxed                            |
+      |               | layout-top-nav                          |
+      |               | sidebar-collapse                        |
+      |               | sidebar-mini                            |
+      |---------------------------------------------------------|
+      -->
    <link rel="stylesheet" href="../plugins/datatables/dataTables.bootstrap.css">
    
    <link href="../css/fileinput.css" media="all" rel="stylesheet" type="text/css"/>
@@ -30,7 +52,7 @@
                <div class="col-md-12">
                   <div class="box">
                      <div class="box-header with-border">
-                        <h3 class="box-title"><i class="fa fa-share-square-o" aria-hidden="true"></i> Actualizar CSV Recibo {{$tipo}} </h3>
+                        <h3 class="box-title"><i class="fa fa-share-square-o" aria-hidden="true"></i> Actualizar CSV Embarque {{$tipo}} </h3>
                         <div class="box-tools pull-right">
                            <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
                            </button>
@@ -43,7 +65,7 @@
                            <div class="col-md-12">
 						    
                               <h5><i class="fa fa-file-excel-o" aria-hidden="true"></i> Importar Archivo:</h5>
-                              <form action="{{url('importCSVRecibo')}}" class="form-horizontal" method="post" enctype="multipart/form-data">
+                              <form action="{{url('importCSVEmbarque')}}" class="form-horizontal" method="post" enctype="multipart/form-data">
                                  {{ csrf_field() }}
                                  <input  id="file-0d" type="file" class="file" name="import_file" />
 								 <input  type="hidden" name="tipo" value="{{$tipo}}" class="file"/>
@@ -54,50 +76,50 @@
                                     <thead  class="btn-primary">
                                        <tr>
                                           <th>Cliente</th>
-                                          <th>Numero de Recibo</th>
-                                          <th>Referencia del recibo</th>
-                                          <th>Cantidad Recibida</th>
-                                          <th>Fecha de Proceso</th>
-                                          <th>Tipo de Unidad</th>
+                                          <th>Numero de orden</th>
+                                          <th>Referencia Cliente</th>
+                                          <th>Nombre Consignatario</th>
+                                          <th>Cantidad Embarcada</th>
+                                          <th>Fecha Procesada</th>
+                                          <th>Tipo de unidad</th>
                                           <th>Agranel / Paletizado</th>
-                                          <th>Cant y Tipo Tar</th>
                                           <th>Inb / Outb</th>
                                           <th>Operador</th>
-                                          <th>Fecha y Hora</th>
+                                          <th>Fecha/Hora</th>
                                           <th>Flujo del proceso</th>
                                           <th>Sellos 1</th>
                                           <th>Sellos 2</th>
                                           <th>Temp Frente</th>
                                           <th>Temp Medio</th>
-                                          <th>Temp Atrás</th>
-                                          <th>Temp Promedio</th>
+                                          <th>Temp Atras</th>
+                                          <th>Cant y Tipo de Tarima</th>
                                           <th>Nombre Chofer</th>
-                                          <th>Transporte</th>
+                                          <th>ON_LOAD</th>
                                        </tr>
                                     </thead>
 										<tbody>
-									 @foreach($Recibo as $recibo)
+									 @foreach($Embarque as $embarque)
                                            <tr>
-			                                  <td>{{$recibo->Cliente}}</td>
-											  <td>{{$recibo->NumerodeRecibo}}</td>
-											  <td>{{$recibo->ReferenciaRecibo}}</td>
-											  <td>{{$recibo->CantidadRecibida}}</td>
-											  <td>{{$recibo->FechadeProceso}}</td>
-											  <td>{{$recibo->TipodeUnidad}}</td>
-											  <td>{{$recibo->AgranelPaletizado}}</td>
-											  <td>{{$recibo->CantTipoTar}}</td>
-											  <td>{{$recibo->InbOutb}}</td>
-											  <td>{{$recibo->Operador}}</td>
-											  <td>{{$recibo->FechaHora}}</td>
-											  <td>{{$recibo->FlujoProceso}}</td>
-											  <td>{{$recibo->Sellos1}}</td>
-											  <td>{{$recibo->Sellos2}}</td>
-											  <td>{{$recibo->TempFrente}}</td>
-											  <td>{{$recibo->TempMedio}}</td>
-											  <td>{{$recibo->TempAtrás}}</td>
-											  <td>{{$recibo->TempPromedio}}</td>
-											  <td>{{$recibo->Nombrecibohofer}}</td>
-											  <td>{{$recibo->Transporte}}</td>
+										   <td>{{$embarque->Cliente}}</td>
+										   <td>{{$embarque->Numerodeorden}}</td>
+										   <td>{{$embarque->ReferenciaCliente}}</td>
+										   <td>{{$embarque->NombreConsignatario}}</td>
+										   <td>{{$embarque->CantidadEmbarcada}}</td>
+										   <td>{{$embarque->FechaProcesada}}</td>
+										   <td>{{$embarque->Tipodeunidad}}</td>
+										   <td>{{$embarque->AgranelPaletizado}}</td>
+										   <td>{{$embarque->InbOutb}}</td>
+										   <td>{{$embarque->Operador}}</td>
+										   <td>{{$embarque->FechaHora}}</td>
+										   <td>{{$embarque->Flujodelproceso}}</td>
+										   <td>{{$embarque->Sellos1}}</td>
+										   <td>{{$embarque->Sellos2}}</td>
+										   <td>{{$embarque->TempFrente}}</td>
+										   <td>{{$embarque->TempMedio}}</td>
+										   <td>{{$embarque->TempAtras}}</td>
+										   <td>{{$embarque->CantyTipodeTarima}}</td>
+										   <td>{{$embarque->NombreChofer}}</td>
+										   <td>{{$embarque->ON_LOAD}}</td>
                                            </tr>
 										 @endforeach
 								   </tbody>

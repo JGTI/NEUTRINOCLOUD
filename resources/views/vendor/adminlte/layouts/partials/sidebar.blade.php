@@ -7,7 +7,7 @@
         <!-- Sidebar user panel (optional) -->
         @if (! Auth::guest())
             <div class="user-panel">
-		
+
 		        <div class="pull-left info">
                     <p>{{ Auth::user()->name }}</p>
                     <!-- Status -->
@@ -16,7 +16,7 @@
                 <div class="pull-left image">
                     <img src="{{ Gravatar::get($user->email) }}" class="img-circle" alt="User Image" />
                 </div>
-               
+
             </div>
         @endif
 
@@ -44,17 +44,17 @@
             </li>
                 </ul>
             </li>
-			
-			
-		    
-			
-			
-			
-			
+
+
+
+
+
+
+
 			<li class="treeview">
 			     <a href="#"><i class="fa fa-cubes" aria-hidden="true"></i> <span>Lay Out</span> <i class="fa fa-angle-left pull-right"></i></a>
                 <ul class="treeview-menu">
-                  
+
             <li class="treeview">
 			     <a href="#"><i class="fa fa-map-marker" aria-hidden="true"></i> <span>Bajio</span> <i class="fa fa-angle-left pull-right"></i></a>
                 <ul class="treeview-menu">
@@ -107,21 +107,21 @@
                     <li><a href="{{url('layout/Cancún, QR')}}"><i class="fa fa-circle" aria-hidden="true"></i>Cancún, QR</a></li>
                 </ul>
             </li>
-			
-		
+
+
                 </ul>
             </li>
-			
-			
-			
+
+
+
 			<li class="treeview">
 			     <a href="#"><i style="font-size:15px;" class="fa fa-refresh fa-spin fa-3x fa-fw"></i></i> <span>Monitoreo de Planta</span> <i class="fa fa-angle-left pull-right"></i></a>
                 <ul class="treeview-menu">
                     <li><a href="{{url('UsuariosNeutrino')}}"><i class="fa fa-circle" aria-hidden="true"></i>Usuarios</a></li>
                 </ul>
             </li>
-			
-			
+
+
 			<li class="treeview">
 			     <a href="#"><i class="fa fa-cogs" aria-hidden="true"></i> <span> Administracion Neutrino</span> <i class="fa fa-angle-left pull-right"></i></a>
                 <ul class="treeview-menu">
@@ -129,12 +129,12 @@
 					<li><a href="{{url('Clientes')}}"><i class="fa fa-users" aria-hidden="true"></i>Clientes</a></li>
                 </ul>
             </li>
-			
-		
+
+
         </ul><!-- /.sidebar-menu -->
 		
-		
-		
+
+
     </section>
     <!-- /.sidebar -->
 </aside>

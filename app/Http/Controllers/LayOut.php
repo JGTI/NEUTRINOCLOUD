@@ -73,33 +73,25 @@ class LayOut extends Controller
 		$ArrayClientes[$x]="";
 		$ArrarProductos[$x]="";
 		foreach($AlmacenesArray as $AlmacenesA){
-			$ArrayClientes[$x] = '{name:"'.$AlmacenesA->nombre.'",y:'.$AlmacenesA->total.',drilldown:"'.$AlmacenesA->nombre.'"}';
+			$ArrayClientes[$x] = '{name:"'.addslashes($AlmacenesA->nombre).'",y:'.addslashes($AlmacenesA->total).',drilldown:"'.addslashes($AlmacenesA->nombre).'"}';
+		$ArrarProductos[$x]="";
 		
 		$AlmacenesProductoArray=DB::table('csv_producto_almacenes')
-		->join('empresas','empresas.id','csv_producto_almacenes.empresa')
-		->join('clientes','clientes.id','csv_producto_almacenes.Cliente')
-		->select('clientes.id as id_cliente','csv_producto_almacenes.DescripciondeProducto as DescripciondeProducto','clientes.nombre as nombre',DB::raw('count(*) as total'))
-		->where('empresas.status', $this->Activo)
+		->select('csv_producto_almacenes.DescripciondeProducto as DescripciondeProducto',DB::raw('count(*) as total'))
 		->where('csv_producto_almacenes.status', $this->Activo)
-		->where('empresas.id',$EmpresaId)
+		->where('csv_producto_almacenes.empresa',$EmpresaId)
 		->where('csv_producto_almacenes.Cliente',$AlmacenesA->id_cliente)
 		->groupBy('csv_producto_almacenes.DescripciondeProducto')
-		->get()
-		;
-			$ArrarProductos[$x] = '{
-                name: "'.$AlmacenesA->nombre.'",
-                id: "'.$AlmacenesA->nombre.'",
-                data: [
-                    [
-                        "v11.0",
-                        24.13
-                    ],
-                    [
-                        "v8.0",
-                        17.2
-                    ],
-                ]
-            }';
+		->get();
+		
+		
+			$ArrarProductos[$x] =$ArrarProductos[$x].'{name: "'.$AlmacenesA->nombre.'",id: "'.$AlmacenesA->nombre.'",data: [ ';
+			$caja="";
+            foreach($AlmacenesProductoArray as $AlmacenesProductoA){
+				$caja=$caja.'["'.addslashes($AlmacenesProductoA->DescripciondeProducto).'",'.addslashes($AlmacenesProductoA->total).'],';
+			}
+			$ArrarProductos[$x]=$ArrarProductos[$x].$caja;
+            $ArrarProductos[$x] = $ArrarProductos[$x].' ]}';
 		$x++;
 		
 		}

@@ -59,38 +59,11 @@
 										  <th>F. Caducidad</th>
 										  <th>Lote Cliente</th>
 										  <th>L. Tarima</th>
-										  <th>En Preparacion</th>
-										  <th>En Recibo</th>
-										  <th>Cantidad Retenida</th>
-										  <th>Codigo de Retencion</th>
 										  <th>Cantidad Disponible</th>
 										  <th>Cantidad Total</th>
 										  <th>Fecha de Recibo</th>
-										  <th>Entrada</th>
                                        </tr>
                                     </thead>
-									
-										<tbody>
-									 @foreach($Productos as $PAlmacen)
-                                           <tr>
-			                                  <td>{{$PAlmacen->Cliente}}</td>
-											  <td>{{$PAlmacen->Producto}}</td>
-											  <td>{{$PAlmacen->DescripciondeProducto}}</td>
-											  <td>{{$PAlmacen->Ubicacion}}</td>
-											  <td>{{$PAlmacen->FCaducidad}}</td>
-											  <td>{{$PAlmacen->LoteCliente}}</td>
-											  <td>{{$PAlmacen->LTarima}}</td>
-											  <td>{{$PAlmacen->EnPreparacion}}</td>
-											  <td>{{$PAlmacen->EnRecibo}}</td>
-											  <td>{{$PAlmacen->CantidadRetenida}}</td>
-											  <td>{{$PAlmacen->CodigodeRetencion}}</td>
-											  <td>{{$PAlmacen->CantidadDisponible}}</td>
-											  <td>{{$PAlmacen->CantidadTotal}}</td>
-											  <td>{{$PAlmacen->FechadeRecibo}}</td>
-											  <td>{{$PAlmacen->Entrada}}</td>
-											</tr>
-										 @endforeach
-								   </tbody>
                                  </table>
                                  <script src="../plugins/jQuery/jquery-2.2.3.min.js"></script>
                                  <div>
@@ -115,17 +88,32 @@
       @include('adminlte::layouts.partials.scripts')
       @show
    </body>
-   <script src="../bootstrap/js/bootstrap.min.js"></script>
-   <script src="../plugins/datatables/jquery.dataTables.min.js"></script>
-   <script src="../plugins/datatables/dataTables.bootstrap.min.js"></script>
-   <script src="../plugins/slimScroll/jquery.slimscroll.min.js"></script>
-   <script src="../plugins/fastclick/fastclick.js"></script>
-   <script src="../dist/js/app.min.js"></script>
-   <script src="../dist/js/demo.js"></script>
-   <script>	
-   
-$(document).ready(function(){
-    $('#myTable').DataTable();
-})
+  <script src="bootstrap/js/bootstrap.min.js"></script>
+   <script src="plugins/datatables/jquery.dataTables.min.js"></script>
+   <script src="plugins/datatables/dataTables.bootstrap.min.js"></script>
+   <script src="plugins/slimScroll/jquery.slimscroll.min.js"></script>
+   <script src="plugins/fastclick/fastclick.js"></script>
+   <script src="dist/js/app.min.js"></script>
+   <script src="dist/js/demo.js"></script>
+   <script>	  
+      $(document).ready(function() {
+          $('#myTable').DataTable( {
+              "processing": true,
+              "serverSide": true,
+              "ajax": "/api/Productos",
+      		"columns":[   
+      	   {data:'Cliente'},
+      	   {data:'Producto'},
+		   {data:'DescripciondeProducto'},
+		   {data:'Ubicacion'},
+		   {data:'FCaducidad'},
+		   {data:'LoteCliente'},
+      	   {data:'LTarima'},
+		   {data:'CantidadDisponible'},
+		   {data:'CantidadTotal'},
+		   {data:'FechadeRecibo'},
+      		]
+          } );
+      } );
    </script>	
 </html>

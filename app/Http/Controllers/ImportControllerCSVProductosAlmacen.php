@@ -22,10 +22,9 @@ class ImportControllerCSVProductosAlmacen extends Controller
         }
 		
 	public function ProductosAlmacen(){
-	  $Productos = csv_producto_almacene::all()->where("empresa","=", Auth::user()->empresa)->where("status","=", $this->Activo);
+
 	  $last_update=csv_producto_almacene::select('updated_at')->where("empresa","=", Auth::user()->empresa)->where("status","=", $this->Activo)->first();
-	 
-      return view('vendor/adminlte/layouts/CSV/CSVProductosAlmacen',compact('last_update','Productos'));
+      return view('vendor/adminlte/layouts/CSV/CSVProductosAlmacen',compact('last_update'));
     }
 	
 	

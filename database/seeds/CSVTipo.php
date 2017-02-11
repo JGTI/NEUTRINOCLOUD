@@ -4,7 +4,7 @@ use Illuminate\Database\Seeder;
 use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Model;
 
-class CSVReciboTipo extends Seeder
+class CSVTipo extends Seeder
 {
     /**
      * Run the database seeds.
