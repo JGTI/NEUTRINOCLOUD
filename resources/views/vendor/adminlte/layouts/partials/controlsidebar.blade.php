@@ -44,10 +44,7 @@
         <div class="tab-pane" id="control-sidebar-settings-tab">
 		 <h3 class="control-sidebar-heading"><i class="fa fa-star" aria-hidden="true"></i> Panel de Control de Alertas</p></h3>
          <button onclick="parar();" class="btn btn-danger form-control"><i class="fa fa-volume-off" aria-hidden="true"></i> Silenciar Alertaas        </button>
-		 <button onclick="reproducir(this.value);" value="Amoniaco" class="btn btn-info form-control"><i class="fa fa-volume-off" aria-hidden="true"></i> Probar Alerta Amoniaco    &nbsp;</button>
-		 <button onclick="reproducir(this.value);" value="Temperatura" class="btn btn-warning form-control"><i class="fa fa-volume-off" aria-hidden="true"></i> Probar Alerta Temperatura</button>
-		 <button onclick="reproducir(this.value);" value="Mensaje" class="btn btn-success form-control"><i class="fa fa-volume-off" aria-hidden="true"></i> Probar Alerta Información</button>
-        </div><!-- /.tab-pane -->
+		</div><!-- /.tab-pane -->
     </div>
 </aside><!-- /.control-sidebar
 

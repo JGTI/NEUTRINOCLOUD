@@ -18,14 +18,13 @@ function Notificaciones() {
                     type: 'POST',
                     data: {_token: "{{ csrf_token() }}"},
                     dataType: 'JSON',
-                    success: function (result,sonido) { 
-                       if(result!=""){ 
-					     alert(result);
-					     document. getElementById("Alerta").src = "../Sonidos/"+sonido+"";
+                    success: function (ResultArray) {					
+                       if(ResultArray[1]!=""){ 
+					     document. getElementById("Alerta").src = "../Sonidos/"+ResultArray[0]+"";
                          document.getElementById("Alerta").autoplay = true;
 	                     document.getElementById("Alerta").load();
                          document.getElementById("SensoresAlerta").style.display = 'block';
-						 document.getElementById("AlertaProblemas").innerHTML = result;
+						 document.getElementById("AlertaProblemas").innerHTML = ResultArray[1];
                        }
 					   else
 					   {

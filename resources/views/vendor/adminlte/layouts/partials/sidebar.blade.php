@@ -129,6 +129,16 @@
 					<li><a href="{{url('Clientes')}}"><i class="fa fa-users" aria-hidden="true"></i>Clientes</a></li>
                 </ul>
             </li>
+			
+			
+			
+			
+			<li class="treeview">
+			     <a href="#"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> <span> Test Panel</span> <i class="fa fa-angle-left pull-right"></i></a>
+                <ul class="treeview-menu">
+                    <li><a href="{{url('Test_Alertas')}}"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i>Alertas</a></li>
+                </ul>
+            </li>
 
 
         </ul><!-- /.sidebar-menu -->

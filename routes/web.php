@@ -15,7 +15,9 @@
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/Test_Alertas', 'Alertas@Test_Alertas');
 Route::post('/Alertas', 'Alertas@Notificar_Alertas');
+Route::post('/Test_Activar_Alarma', 'Alertas@Test_Activar_Alarma');
 Route::get('/layout/{Empresa}', 'LayOut@VistaLayOut');
 Route::get('/home', 'Dashboard@Dashboard');
 Route::get('/Actualizar_Productos_Almacen', 'ImportControllerCSVProductosAlmacen@ProductosAlmacen');
