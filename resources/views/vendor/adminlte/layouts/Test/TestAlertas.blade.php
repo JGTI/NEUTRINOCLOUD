@@ -40,24 +40,20 @@
                                  <div class="col-md-6">
 								 <button type="file" name="Alarma" value="1" class="form-control btn btn-info"><i aria-hidden="true" class="fa fa-volume-off"></i> Alarma Amoniaco</button>
 								 </div>
-								 <div class="col-md-6">
-								 <button type="file" name="Alarma" value="-1" class="form-control btn btn-danger"><i aria-hidden="true" class="fa fa-volume-off"></i> Desactivar Alarma Amoniaco</button>
-								 </div>
+								
 								 
 								 <div class="col-md-6">
 								 <button type="file" name="Alarma" value="5" class="form-control btn btn-warning"><i aria-hidden="true" class="fa fa-volume-off"></i> Alarma Electricidad</button>
 								 </div>
 								 
-								 <div class="col-md-6">
-								 <button type="file" name="Alarma" value="-5" class="form-control btn btn-danger"><i aria-hidden="true" class="fa fa-volume-off"></i> Desactivar Alarma Amoniaco</button>
-								 </div>
+								
 								 
 								 <div class="col-md-6">
 								 <button type="file" name="Alarma" value="2" class="form-control btn btn-primary"><i aria-hidden="true" class="fa fa-volume-off"></i> Alarma Temperatura</button>
                                  </div>
 								 
 								 <div class="col-md-6">
-								 <button type="file" name="Alarma" value="-2" class="form-control btn btn-danger"><i aria-hidden="true" class="fa fa-volume-off"></i> Desactivar Alarma Amoniaco</button>
+								 <button type="file" name="Alarma" value="0" class="form-control btn btn-danger"><i aria-hidden="true" class="fa fa-volume-off"></i> Desactivar Alarmas</button>
 								 </div>
 							  </form>
                     

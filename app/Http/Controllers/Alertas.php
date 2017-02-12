@@ -53,7 +53,7 @@ class Alertas extends Controller
 	public function Test_Activar_Alarma(Request $request){
 	$tipo=$request->input('Alarma');
 	
-	
+	if($tipo==1 || $tipo==2 || $tipo==5){
 	        DB::table('alertas')->insert([
             'empresa' => Auth::user()->empresa,
 			'usuario' => 	Auth::user()->id,
@@ -63,7 +63,13 @@ class Alertas extends Controller
 			'created_at' =>	Carbon::now()->format('Y-m-d H:i:s'),
 			'updated_at' =>	Carbon::now()->format('Y-m-d H:i:s'),
 			 ]);
-			
+	}
+	else{
+		    DB::table('alertas')
+            ->where('status' , DB::table('status')->where('nombre', 'Activo')->first()->id)
+            ->update(['status' => 2]);
+	}
+	
 			
 	return back()->with('Success','Alarma Activada');	
 	}
