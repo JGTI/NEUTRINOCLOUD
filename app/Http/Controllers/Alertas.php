@@ -17,7 +17,8 @@ class Alertas extends Controller
 	}
 		
     public function Notificar_Alertas(Request $request){
-		
+		 
+		 
 		 $BuscarAlerta=DB::table('alertas') 
 		 ->join('alerta_tipos','alerta_tipos.id','alertas.tipo')
 		 ->join('empresas','empresas.id','alertas.empresa')
@@ -26,10 +27,20 @@ class Alertas extends Controller
 		 ->select('alerta_tipos.nombre as AlertaNombre' , 
 		 'empresas.nombre as EmpresaNombre', 
 		 'alerta_tipos.sonido')->get();
-		 return($BuscarAlerta);
 		 
-		 $response=$BuscarAlerta;
+		 $response='<ul class="menu">';
 		 
+		 foreach($BuscarAlerta as $Alerta){
+		       $response=$response.'<li><a href="#"><h3>'.$Alerta->AlertaNombre."</br>".$Alerta->EmpresaNombre.'<small class="pull-right">Hora</small></h3></a></li>';
+		       $Sonido=$Alerta->sonido;
+			   $control=1;
+		 } 
+		 if(isset($control)){
+		 $response=$response.'</ul>';
+		 }
+		 else{
+		 $response='';
+		 } 
 		 return response()->json($response); 
     }
 }

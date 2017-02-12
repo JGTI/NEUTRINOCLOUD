@@ -73,7 +73,7 @@ class LayOut extends Controller
 		$ArrayClientes[$x]="";
 		$ArrarProductos[$x]="";
 		foreach($AlmacenesArray as $AlmacenesA){
-			$ArrayClientes[$x] = '{name:"'.addslashes($AlmacenesA->nombre).'",y:'.addslashes($AlmacenesA->total).',drilldown:"'.addslashes($AlmacenesA->nombre).'"}';
+		$ArrayClientes[$x] = '{name:"'.addslashes($AlmacenesA->nombre).'",y:'.addslashes($AlmacenesA->total).',drilldown:"'.addslashes($AlmacenesA->nombre).'"}';
 		$ArrarProductos[$x]="";
 		
 		$AlmacenesProductoArray=DB::table('csv_producto_almacenes')

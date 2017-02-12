@@ -33,43 +33,7 @@
                     <ul class="dropdown-menu">
                         <li class="header">Problemas</li>
                         <li>
-                            <!-- Inner menu: contains the tasks -->
-                            <ul class="menu">
-                                <li>
-                                    <a href="#">
-                                        <!-- Task title and progress text -->
-                                        <h3>
-                                           Camara 10 en rango de Temperatura</br>
-										   Frialsa Queretaro
-                                            <small class="pull-right">-3°</small>
-                                        </h3>
-                                        <!-- The progress bar -->
-                                        <div class="progress xs">
-                                            <!-- Change the css width attribute to simulate progress -->
-                                            <div class="progress-bar progress-bar-danger" style="width: 30%" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
-                                                <span class="sr-only">100% {{ trans('adminlte_lang::message.complete') }}</span>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </li>
-								
-								
-								 <li>
-                                    <a href="#">
-                                        <!-- Task title and progress text -->
-                                        <h3>
-                                            <i class="fa fa-warning text-aqua"></i> Fuga de Gas Amoniaco</br>
-										   Frialsa Queretaro
-                                            <small class="pull-right">-3°</small>
-                                        </h3>
-                                    </a>
-                                </li>
-								
-								
-								
-								
-								
-                            </ul>
+                            <div id="AlertaProblemas"></div>
                         </li>
                         <li class="footer">
                             <a href="#">Revisar Sensores</a>

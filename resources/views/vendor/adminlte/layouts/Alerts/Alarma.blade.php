@@ -18,16 +18,18 @@ function Notificaciones() {
                     type: 'POST',
                     data: {_token: "{{ csrf_token() }}"},
                     dataType: 'JSON',
-                    success: function (result) { 
-                       if(result=="Alerta"){ 
-					     document. getElementById("Alerta").src = "../Sonidos/Amoniaco.mp3";
+                    success: function (result,sonido) { 
+                       if(result!=""){ 
+					     alert(result);
+					     document. getElementById("Alerta").src = "../Sonidos/"+sonido+"";
                          document.getElementById("Alerta").autoplay = true;
 	                     document.getElementById("Alerta").load();
                          document.getElementById("SensoresAlerta").style.display = 'block';
+						 document.getElementById("AlertaProblemas").innerHTML = result;
                        }
 					   else
 					   {
-						   alert(result);
+					    document.getElementById("SensoresAlerta").style.display = 'none';
 						document.getElementById("Alerta").pause();
                        }						   
                     }
