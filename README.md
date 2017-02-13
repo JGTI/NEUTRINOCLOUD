@@ -1,29 +1,10 @@
-# README #
+# NEUTRINO CLOUD#
 
-This README would normally document whatever steps are necessary to get your application up and running.
+Neutrino Cloud es una plataforma de automatización desarrollada por la empresa ITF uno objetivos es la automatización de procesos de productividad ya definidos por NEUTRINO 3.0. la versión de NEUTRINO CLOUD tiene la combinación de inteligencia artificial y Internet de las cosas la cual hace la transformación a quien lo usa en el comienzo de una empresa digital 
 
-### What is this repository for? ###
+### Con que tecnologia corre NEUTRINO CLOUD? ###
 
-* Quick summary
-* Version
-* [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
-
-### How do I get set up? ###
-
-* Summary of set up
-* Configuration
-* Dependencies
-* Database configuration
-* How to run tests
-* Deployment instructions
-
-### Contribution guidelines ###
-
-* Writing tests
-* Code review
-* Other guidelines
-
-### Who do I talk to? ###
-
-* Repo owner or admin
-* Other community or team contact
+* Laravel 5.3
+* Python
+* PLC
+* HTML5, JS, AJAX, SQL Server, Twilio,...
