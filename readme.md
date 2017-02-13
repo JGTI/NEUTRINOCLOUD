@@ -1,1 +1,1 @@
-Neutrino es un sistema para medir productividad inventado por la empresa Frialsa Frigorificos SA de CV, y la vercion Neutrino Cloud es
+![NeutrinoAzulGrande.png](https://bitbucket.org/repo/GxqAo6/images/3077552875-NeutrinoAzulGrande.png)Neutrino es un sistema para medir productividad inventado por la empresa Frialsa Frigorificos SA de CV, y la vercion Neutrino Cloud es
