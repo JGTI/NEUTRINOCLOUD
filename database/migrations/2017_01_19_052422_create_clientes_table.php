@@ -18,6 +18,8 @@ class CreateClientesTable extends Migration
 			$table->primary('id');
 			$table->string('nombre');
 			$table->string('rgb');
+			$table->integer('status');
+            $table->foreign('status')->references('id')->on('status');
             $table->timestamps();
         });
     }

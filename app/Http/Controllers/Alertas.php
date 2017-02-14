@@ -15,6 +15,14 @@ class Alertas extends Controller
     public function __construct(){
            	$this->Activo = DB::table('Status')->where('nombre', 'Activo')->first()->id;
 	}
+	
+	
+	
+	public function Silenciar_Alertas(Request $request){
+		     DB::table('users')
+            ->where('id' , Auth::user()->id)
+            ->update(['alerta' => 0]);
+	} 
 		
     public function Notificar_Alertas(Request $request){
 		 
@@ -40,6 +48,14 @@ class Alertas extends Controller
 		 else{
 		 $AlertasCriticas='';
 		 }
+		 
+		 $StatusSonido=Auth::user()->alerta;
+		 
+		 if($StatusSonido==0)
+		 {
+		 $Sonido='';
+		 } 
+		 
 		 $response = array($Sonido, $AlertasCriticas, '2', '3');
 		 json_encode($response);
 		 
@@ -63,6 +79,10 @@ class Alertas extends Controller
 			'created_at' =>	Carbon::now()->format('Y-m-d H:i:s'),
 			'updated_at' =>	Carbon::now()->format('Y-m-d H:i:s'),
 			 ]);
+			 DB::table('users')
+            ->where('empresa' , Auth::user()->empresa)
+			->where('status' , DB::table('status')->where('nombre', 'Activo')->first()->id)
+            ->update(['alerta' => 1]);
 	}
 	else{
 		    DB::table('alertas')

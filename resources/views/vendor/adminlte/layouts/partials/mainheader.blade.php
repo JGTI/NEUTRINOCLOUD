@@ -36,7 +36,7 @@
                             <div id="AlertaProblemas"></div>
                         </li>
                         <li class="footer">
-                            <a href="#">Revisar Sensores</a>
+                            <a href="#" onclick="parar();"><i aria-hidden="true" class="fa fa-volume-off text-red"></i> Silenciar Alarmas</a>
                         </li>
                     </ul>
                 </li>

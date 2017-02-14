@@ -17,6 +17,7 @@ Route::get('/', function () {
 });
 Route::get('/Test_Alertas', 'Alertas@Test_Alertas');
 Route::post('/Alertas', 'Alertas@Notificar_Alertas');
+Route::post('/Silenciar_Alertas', 'Alertas@Silenciar_Alertas');
 Route::post('/Test_Activar_Alarma', 'Alertas@Test_Activar_Alarma');
 Route::get('/layout/{Empresa}', 'LayOut@VistaLayOut');
 Route::get('/home', 'Dashboard@Dashboard');
@@ -56,29 +57,27 @@ Route::get('/api/Productos', function () {
 
  
 Route::get('/Clientes', 'Cliente@ClientesVista');
+Route::post('/Clientes_Alterar', 'Cliente@Clientes_Alterar');
 Route::get('/api/Clientes', function () {
-	    $Clients =  DB::table('clientes')
+	    
+		$Clientes =  DB::table('clientes')
             ->select('clientes.id', 'clientes.nombre', 'clientes.rgb')
+			->where('clientes.status', DB::table('Status')->where('nombre', 'Activo')->first()->id)
             ->get();
-			
-        return Datatables::of($Clients)
-		    ->addColumn('id', function ($Clients) {
-                return $Clients->id;
+			 
+        return Datatables::of($Clientes)
+			->addColumn('nombre', function ($Clientes) {
+                return '<input  style="height:20px;width:100%;" type="text" class="input form-control" id="nombre_'.$Clientes->id.'" value="'.$Clientes->nombre.'"></input>';
             })
-			
-			->addColumn('nombre', function ($Clients) {
-                return '<input  style="height:20px;width:100%;" type="text" class="input form-control" value="'.$Clients->nombre.'"></input>';
+		    ->addColumn('rgbColor', function ($Clientes) {
+                return '<center><input id="rgb_'.$Clientes->id.'" type="color" value="'.$Clientes->rgb.'"></input></center>';
             })
-			
-		    ->addColumn('rgbColor', function ($Clients) {
-                return '<center><input  type="color" value="'.$Clients->rgb.'"></input></center>';
+			->addColumn('modificar', function ($Clientes) {
+                return '<center><button id="modificar_'.$Clientes->id.'" value="'.$Clientes->id.'" onclick="accionCliente(1,this.value)" class="btn btn-xs btn-naranja"><i class="glyphicon glyphicon-edit"></i></button></center>';
             })
-			->addColumn('modificar', function ($Clients) {
-                return '<center><button value="1" class="btn btn-xs btn-naranja"><i class="glyphicon glyphicon-edit"></i></button></center>';
-            })
-			->addColumn('eliminar', function ($Clients) {
-			return '<center><button  value="2" class="btn btn-xs btn-danger"><i class="fa fa-trash"></i></button ></center>';
-            })->make(true);
+			->addColumn('eliminar', function ($Clientes) {
+			return '<center><button  id="eliminar_'.$Clientes->id.'" value="'.$Clientes->id.'" onclick="accionCliente(2,this.value)" class="btn btn-xs btn-danger"><i class="fa fa-trash"></i></button ></center>';
+            })->setRowId('id')->make(true);
 });
 
 

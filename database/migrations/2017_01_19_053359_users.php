@@ -25,6 +25,7 @@ class Users extends Migration
 			$table->integer('rol');
             $table->foreign('rol')->references('id')->on('roles');
             $table->rememberToken();
+			$table->integer('alerta')->nullable()->default(0);
             $table->timestamps();
         });
     }

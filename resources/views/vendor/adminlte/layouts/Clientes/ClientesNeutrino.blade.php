@@ -20,6 +20,7 @@
       <!-- Content Wrapper. Contains page content -->
       <div class="content-wrapper">
         
+	  <div id="Cliente_Alerta"></div>
 	
 		 
          <!-- Main content -->
@@ -65,6 +66,36 @@
                      <!-- /.box-footer -->
                   </div>
                   <!-- Your Page Content Here -->
+				  
+				   <script>
+				      function accionCliente(boton,id){
+						  
+					      var nombre = document.getElementById("nombre_"+id).value;
+					      var rgb = document.getElementById("rgb_"+id).value;
+						  var accion=boton;
+						  var id_cliente=id;
+						  if(boton==2){
+						  document.getElementById(id).style.display = 'none';
+						  }
+						  $.ajax({ 
+                                url: '{{url("Clientes_Alterar")}}',
+                                type: 'POST',
+                                data: {_token: "{{ csrf_token() }}",
+								       nombre: nombre,
+									   rgb: rgb,
+									   accion: accion,
+									   id_cliente: id_cliente
+									  },
+                                dataType: 'JSON',
+                                success: function (ResultArray) {					
+						                document.getElementById("Cliente_Alerta").innerHTML = ResultArray[0];
+                                }
+					   
+                         });
+						  
+					  
+					  }
+				   </script>
          </section>
          <!-- /.content -->
          </div>

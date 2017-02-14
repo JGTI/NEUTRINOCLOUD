@@ -10,6 +10,7 @@ class Cliente extends Model
 	   'id', 
 	   'nombre',
 	   'rgb',
+	   'status',
 	   'created_at',
 	   'updated_at',
 	   ];

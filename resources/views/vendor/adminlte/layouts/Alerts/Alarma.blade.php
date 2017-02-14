@@ -5,12 +5,15 @@
 <script>
    function parar(){
        document.getElementById("Alerta").pause();
+	   $.ajax({ 
+                    url: '{{url("Silenciar_Alertas")}}',
+                    type: 'POST',
+                    data: {_token: "{{ csrf_token() }}"},
+                    dataType: 'JSON',
+              }); 
+				
    }
-   function reproducir(sonido){
-       document. getElementById("Alerta").src = "../Sonidos/"+sonido+".mp3";
-       document.getElementById("Alerta").autoplay = true;
-	   document.getElementById("Alerta").load();
-   }
+
 Notificaciones();
 function Notificaciones() {
 		$.ajax({ 

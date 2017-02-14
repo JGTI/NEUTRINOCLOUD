@@ -31,7 +31,7 @@ class Cliente extends Controller
 		
      public function ClientesVista(){
 
-      return view('vendor/adminlte/layouts/Clientes/UsuarioNeutrino');
+      return view('vendor/adminlte/layouts/Clientes/ClientesNeutrino');
     }
 	
 	public function NuevoUsuarioNeutrinoVista(){
@@ -76,4 +76,42 @@ class Cliente extends Controller
 			return back()->with('success','Usuario Registrado Con Exito.');
 			}
     }
+	
+	public function Clientes_Alterar(Request $request){
+		 
+		 $nombre=$request->input('nombre');
+		 $rgb=$request->input('rgb');
+		 $accion=$request->input('accion');
+		 $id_cliente=$request->input('id_cliente');
+		 
+		 if($accion==1){
+			
+			DB::table('clientes')
+            ->where('id' , $id_cliente)
+            ->update(['rgb' => $rgb,'nombre' => $nombre]);
+			
+            $div='<div class="master alert alert-success alert-dismissable" role="alert">
+			  <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+			  <i class="fa fa-times" aria-hidden="true"></i> '.$nombre.' Modificado Con Exito
+			</div>';
+         }
+		 else{
+			 
+			
+			
+			DB::table('clientes')
+            ->where('id' , $id_cliente)
+            ->update(['status' => $this->Inactivo]);
+			
+             $div='<div class="master alert alert-danger alert-dismissable" role="alert">
+			  <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+			  <i class="fa fa-times" aria-hidden="true"></i> '.$nombre.' Eliminado Con Exito
+			</div>';
+         }
+		 
+		 $response = array($div);
+		 json_encode($response);
+		 return $response; 
+		 
+	} 
 }
